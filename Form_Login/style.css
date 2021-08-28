@@ -1,0 +1,69 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    background: #9b59b6;
+
+
+}
+.box{
+    width: 300px;   /* */
+    padding: 40px;
+    position: absolute;
+    top: 50%;   /* khoang cach voi dau trang */
+    left: 50%;  /* khong cach voi ben trai trang*/
+    transform: translate(-50%,-50%);
+    background: #212125;
+    text-align: center;     /*can vao vung giua*/
+
+   
+}
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500px;
+
+}
+
+
+.box input[type="text"],.box input[type = "password"]{
+    border: 0px;
+    background: none;   /*bo background tai vung */
+    display: block;
+    margin: 20px auto;
+    text-align: center; /*vao chinh giua*/
+    border: 2px solid blue; 
+    padding: 14px 10px; 
+    width: 200px;
+    outline: none;
+    color: rgb(255, 255, 255); /* mau chu khi nguoi dung nhap vao*/
+    border-radius: 26px;    /*bo cac canh cho tron*/
+    transition: 0.25s;
+     
+}
+
+.box input[type="text"]:focus,.box input[type = "password"]:focus {
+    width: 280px;
+    border-color: rgb(214, 0, 0);
+}
+.box input[type = "submit"]{
+    border: 0px;
+    background: none;   /*bo background tai vung */
+    display: block;
+    margin: 20px auto;
+    text-align: center; /*vao chinh giua*/
+    border: 2px solid rgb(9, 211, 43); 
+    padding: 14px 40px; 
+    
+    outline: none;
+    color: rgb(255, 255, 255); /* mau chu khi nguoi dung nhap vao*/
+    border-radius: 26px;    /*bo cac canh cho tron*/
+    transition: 0.25s;
+    cursor: pointer;
+     
+}
+
+.box input[type = "submit"]:hover{
+    background:rgb(65, 202, 88);
+}
+
