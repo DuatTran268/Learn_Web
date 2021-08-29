@@ -1,69 +1,71 @@
-body{
+body{   /*định dạng toàn trang*/
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
-    background: #9b59b6;
-
+    font-family: sans-serif;    
+    background: #9b59b6;        /* nền chính toàn trang */
 
 }
+
 .box{
-    width: 300px;   /* */
-    padding: 40px;
-    position: absolute;
+    width: 300px;   /*chiều dài khung form  */
+    padding: 20px;  
+    position: absolute;     /* absolute đưa box form đăng nhập ra chính giữa*/
     top: 50%;   /* khoang cach voi dau trang */
     left: 50%;  /* khong cach voi ben trai trang*/
-    transform: translate(-50%,-50%);
-    background: #212125;
+    transform: translate(-50%,-50%);    /*chuyển dịch trong vùng*/
+    background: #212125;            /*nền của box form*/
     text-align: center;     /*can vao vung giua*/
 
-   
 }
+/*chữ LOGIN trong box */
 .box h1{
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500px;
+    color: rgb(252, 241, 241);  /*màu của chữ login*/
+    text-transform: uppercase;      /* text-transform font chữ login*/
+    font-weight: 500px;         
 
 }
-
 
 .box input[type="text"],.box input[type = "password"]{
     border: 0px;
-    background: none;   /*bo background tai vung */
-    display: block;
-    margin: 20px auto;
+    background: none;   /*bo background tai vung user name và password */
+    margin: 20px auto;      /* căn lề: 20 khoảng cách trên với dưới 20px , trái phải auto*/
     text-align: center; /*vao chinh giua*/
-    border: 2px solid blue; 
-    padding: 14px 10px; 
-    width: 200px;
-    outline: none;
+    border: 2px solid blue;     /*border tạo đường line cho viền có màu xanh */
+    padding: 14px 10px;     /* căn chỉnh chiều rộng 14 chiều dài 10 cho khung usename và password*/  
+    width: 200px;           /* chiều rộng của usename và password*/
+    outline: none;          /* xóa bỏ viền hình vuông bên ngoài*/
     color: rgb(255, 255, 255); /* mau chu khi nguoi dung nhap vao*/
-    border-radius: 26px;    /*bo cac canh cho tron*/
-    transition: 0.25s;
+    border-radius: 26px;    /*bo các cạnh của ô cho tròn*/
+    transition: 0.25s;      /* độ delay khi click chuột để nhập vào form*/
      
 }
 
 .box input[type="text"]:focus,.box input[type = "password"]:focus {
-    width: 280px;
-    border-color: rgb(214, 0, 0);
+    width: 280px;   /* độ rộng khi click chuột vàoo*/
+    border-color: rgb(214, 0, 0);   /*  màu viền khi click chuột vào*/
 }
 .box input[type = "submit"]{
-    border: 0px;
-    background: none;   /*bo background tai vung */
-    display: block;
-    margin: 20px auto;
-    text-align: center; /*vao chinh giua*/
-    border: 2px solid rgb(9, 211, 43); 
-    padding: 14px 40px; 
-    
-    outline: none;
+    background: none;   /*bo background tai nút submit */
+    margin: 20px auto;  /* margin: căn lề khoảng cách trên dưới 20px, auto căn lề trái phải */
+    text-align: center; /*Căn chỉnh chữ vào chính giữa*/
+    border: 2px solid rgb(9, 211, 43);  /*border tạo viền và màu viền */ 
+    padding: 14px 40px;         /* căn chỉnh chiều rộng 14 chiều dài 40 của ô login*/ 
     color: rgb(255, 255, 255); /* mau chu khi nguoi dung nhap vao*/
     border-radius: 26px;    /*bo cac canh cho tron*/
-    transition: 0.25s;
+    transition: 0.25s;          /* độ delay khi di chuột vào phần login*/      
     cursor: pointer;
      
 }
 
+/* hover nút login*/
 .box input[type = "submit"]:hover{
-    background:rgb(65, 202, 88);
+    background:rgb(65, 202, 88);    /* màu khi chạm vào phần login*/
+}
+h6{ /*by Tran Nhat Duat*/
+    color: yellow;      /* color màu chữ*/
+    font-size: 12px;        /*font-size cỡ chữ*/
+    text-align: center;      /*text-align: căn chữ vào giữa*/   
+    text-transform: none;   /* text-transfom: phông chữ : ko*/
+    padding: 550px;         /* padding: căn lề so với top 550px*/
 }
 
