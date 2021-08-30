@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;    /*căn toàn bộ body vào giữa*/
+    min-height: 100vh;          /* đưa vào trung tâm*/
+    background: #ffb8b8;
+}
+
+/*tạo màu đổ bóng cho cả box trong box ngoài*/
+.wrapper,
+.wrapper .img-area,
+.social-icons a,
+.buttons button{
+    background: rgb(255, 255, 255);
+    border-radius: 16px;        /*border-radius: bo đều 4 cạnh góc vuông 15px*/    
+    box-shadow: -3px -3px 7px #e2ece2,  /*đổ bóng hướng trái trên*/
+                3px 3px 5px rgb(245, 238, 238);  /*đổ bóng hướng phải dưới*/
+
+}
+
+/*class sử dụng dấu . .wrapper định dạng chung cho form*/
+.wrapper{
+    border: 1px solid rgb(0, 255, 55);  /* border: tạo viền có nét 1px màu đỏ*/
+    padding: 30px;    
+    width: 350px;   /*width: rộng ra*/
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;     /* dàn cột */
+   
+
+}
+
+.wrapper .img-area{
+    height: 150px;   /*chiều cao của toàn form*/
+    width: 150px;
+    border-radius: 50%;     /*tạo ra hình tròn bên trong box*/
+    /* display: flex;  
+    align-items: center;
+    justify-content: center; */
+}
+.img-area .inner-area{
+    height: calc(100%-25px);
+    width: calc(100%-25px);
+
+}
+.inner-area img{
+    height: 100%;
+    width: 100%;        /*thu nhỏ ảnh lai vừa tỷ lệ vòng tròn*/
+    border-radius: 50%; /* làm cho ảnh hình tròn*/
+    object-fit: cover;
+}
+.wrapper .name{
+    font-size: 23px;
+    font-weight: 500;   /* font-weight in đậm*/
+    color: blueviolet;      /*màu chữ*/
+    margin: 10px 0px 5px 0px;   /* khoảng cách lần lươt trên , sang trái , dưới, sang phải*/
+
+}
+/*định dạng chữ dòng thứ 2 dưới ảnh*/
+.wrapper .about{
+    font-weight: 400px;
+    color: rgb(27, 223, 27);   /*màu chữ dòng thứ 2*/
+    font-size: 16px;        /*cỡ chữ*/
+}
+/*định dạng căn lề cho icon*/
+.wrapper .social-icons{
+    margin: 15px 0px 25px 0px;  /* khoảng cách lần lượt là trên, sang trái, bên dưới, sang phải */
+
+}
+/*định dạng bên trong icon thẻ a*/
+.social-icons a{
+    height: 40px;   
+    width:40px;
+   
+    display: inline-flex;   /*làm to background*/
+    text-decoration: none;
+    margin: 0 5px;      /* khoảng cách về bên trên 0px, về bên trái với nhau đều 5px*/
+    border-radius: 50%;     /*làm tròn background icon*/
+    position: relative;
+}
+
+/*định dạng 4 icon*/
+.social-icons a:hover:before,
+.buttons button:hover::before,
+.wrapper .icon:hover::before {
+    position: absolute;     /*position: absolute là vị trí : tuyệt đối*/
+    content: "";
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background: #f1f2f6;
+    border-radius: 50%;        /*border-radius: bo tròn là 50%*/    
+    box-shadow: inset -3px -3px 7px #f1eeee,  /*đổ bóng hướng trái trên   | inset tạo độ sau cho nút*/
+                inset 3px 3px 5px rgb(238, 233, 233);  /*đổ bóng hướng phải dưới*/
+
+}
+
+.buttons button:hover::before{
+    border-radius:5px;
+    z-index: -1;
+}
+
+
+/*định dạng bên trong icon thẻ a -> thẻ i*/
+.social-icons a i{
+    text-align: center;
+    width:100%;     /*căn vào chính giữa*/
+    height: 100%;
+    line-height: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+
+/*định dạng cho icon fb*/
+.social-icons a.fb i{
+    color:  #4267B2;
+
+}
+/*định dạng màu cho youtobe*/
+.social-icons a.youtube i{
+    color:  red;
+
+}
+/*màu cho tiktok*/
+.social-icons a.tiktok i{
+    color:  black;
+
+}
+/*màu cho instagram*/
+.social-icons a.instagram i{
+    color:  #c9052f;
+
+}
+
+/*nút message và following*/
+.wrapper .buttons{
+    display: flex;  /*chia tách 2 nút ra*/
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buttons button{
+    position: relative;
+    width: 100%;
+    border:none;
+    outline: none;
+    padding: 12px 0;
+    font-size: 17px;
+    font-weight: 400;   
+    border-radius: 5px;
+    cursor: pointer;
+    color: blue;
+    z-index: 5;
+
+}
+
+.buttons button:first-child{
+    margin-right: 10px;
+}
+
+.buttons button:last-child{
+    margin-left: 10px;
+}
+
+/*định dạng 3 icon tym comments share*/
+.wrapper .social-share{
+    display: flex;      /*dàn hàng ngang 3 icon*/
+    width: 100%;
+    margin-top: 30px;   /* margin-top khoảng cách hàng trên 30px*/
+    padding: 0 5px;
+    justify-content: space-between;     /*dàn đều khoảng cách giữa 3 icon*/
+}
+
+
+/*màu kích cỡ cho cả 3 icon tym cmt share*/
+.social-share .row{
+    color:rgb(8, 8, 8); /*màu cho icons*/
+    font-size: 17px;    /*font-size: kích cỡ chữ và icon*/
+    cursor: pointer;
+    position: relative;     /*kéo ngắn kích cỡ bằng icon*/
+}
+
+
+
+/*kẻ chia vùng cho icon*/
+.social-share .row::before{
+    position: absolute;
+    content:"";
+    width: 2px;     /*width độ dày ( đậm) của đường line khung icon*/
+    height:100%;
+    background:#e2ece2;
+    margin-left: -25px; /*margin-left: sang bên trái -25px*/
+
+}
+
+.row:first-child::before{
+    background: none;
+}
+
+.social-share .row i.icon-2{
+    position: absolute; /*lồng trái tym*/
+    top: 50%;
+    left:0px;
+    transform: translateY(-50%);    /*đè icon đậm lên khung icon*/
+    opacity: 0;     /*giảm màu icon đậm về 0*/
+    pointer-events: none;
+    transition: all 0.3s ease;  /*transition: dealy màu khi di chuột vào 2 icon*/
+
+}
+.row:nth-child(1):hover i.icon-2,       /*màu cho icon tym 1*/
+.row:nth-child(2):hover i.icon-2{       /*màu cho icon tym 2*/
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*2 icon quay về và dấu 3 chấm */
+.wrapper .icon{
+    font-size: 17px;
+    color: #31344b;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.7;
+    top: 15px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
+  }
+  .wrapper .icon i{
+    position: relative;
+    z-index: 9;
+  }
+  .wrapper .icon.arrow{
+    left: 600px;
+    top: 150px;
+  }
+  .wrapper .icon.dots{
+    right: 600px;
+    top: 150px;
+
+  }
