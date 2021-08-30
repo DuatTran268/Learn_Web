@@ -125,12 +125,12 @@ body{
 
 /*định dạng cho icon fb*/
 .social-icons a.fb i{
-    color:  #4267B2;
+    color:  #0940ad;
 
 }
 /*định dạng màu cho youtobe*/
-.social-icons a.youtube i{
-    color:  red;
+.social-icons a.mixcloud i{
+    color:  rgb(18, 15, 49);
 
 }
 /*màu cho tiktok*/
