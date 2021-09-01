@@ -12,24 +12,31 @@ body{
     align-items: center;
     justify-content: center;    /*căn toàn bộ body vào giữa*/
     min-height: 100vh;          /* đưa vào trung tâm*/
-    background: #ffb8b8;
+    background: violet;
 }
 
-/*tạo màu đổ bóng cho cả box trong box ngoài*/
-.wrapper,
+/*định dạng riêng cho box*/
+.wrapper{
+    background: rgb(255, 255, 255);
+    border-radius: 16px;        /*border-radius: bo đều 4 cạnh góc vuông 15px*/    
+    box-shadow: -3px -3px 7px rgb(94, 91, 91),  /*đổ bóng hướng trái trên*/
+                3px 3px 5px rgb(94, 91, 91);  /*đổ bóng hướng phải dưới*/
+
+}
+/*tạo màu đổ bóng cho cả box trong  và icon */
 .wrapper .img-area,
 .social-icons a,
 .buttons button{
     background: rgb(255, 255, 255);
     border-radius: 16px;        /*border-radius: bo đều 4 cạnh góc vuông 15px*/    
-    box-shadow: -3px -3px 7px #e2ece2,  /*đổ bóng hướng trái trên*/
-                3px 3px 5px rgb(245, 238, 238);  /*đổ bóng hướng phải dưới*/
+    box-shadow: -3px -3px 7px rgb(233, 227, 227),  /*đổ bóng hướng trái trên*/
+                3px 3px 5px rgb(233, 227, 227);  /*đổ bóng hướng phải dưới*/
 
 }
 
+
 /*class sử dụng dấu . .wrapper định dạng chung cho form*/
 .wrapper{
-    border: 1px solid rgb(0, 255, 55);  /* border: tạo viền có nét 1px màu đỏ*/
     padding: 30px;    
     width: 350px;   /*width: rộng ra*/
     display: flex;  
@@ -68,7 +75,7 @@ body{
 }
 /*định dạng chữ dòng thứ 2 dưới ảnh*/
 .wrapper .about{
-    font-weight: 400%;
+    font-weight: 400px;
     color: rgb(27, 223, 27);   /*màu chữ dòng thứ 2*/
     font-size: 16px;        /*cỡ chữ*/
 }
@@ -101,8 +108,8 @@ body{
     right: 0;
     background: #f1f2f6;
     border-radius: 50%;        /*border-radius: bo tròn là 50%*/    
-    box-shadow: inset -3px -3px 7px #f1eeee,  /*đổ bóng hướng trái trên   | inset tạo độ sau cho nút*/
-                inset 3px 3px 5px rgb(238, 233, 233);  /*đổ bóng hướng phải dưới*/
+    box-shadow: inset -3px -3px 7px #ffffff,  /*đổ bóng hướng trái trên   | inset tạo độ sau cho nút*/
+                inset 3px 3px 5px rgb(255, 255, 255);  /*đổ bóng hướng phải dưới*/
 
 }
 
@@ -125,12 +132,12 @@ body{
 
 /*định dạng cho icon fb*/
 .social-icons a.fb i{
-    color:  #0940ad;
+    color:  #4267B2;
 
 }
-/*định dạng màu cho mixcloud*/
-.social-icons a.mixcloud i{
-    color:  rgb(18, 15, 49);
+/*định dạng màu cho youtobe*/
+.social-icons a.youtube i{
+    color:  red;
 
 }
 /*màu cho tiktok*/
@@ -159,7 +166,7 @@ body{
     padding: 12px 0;
     font-size: 17px;
     font-weight: 400;   
-    border-radius: 5%;
+    border-radius: 5px;
     cursor: pointer;
     color: blue;
     z-index: 5;
@@ -167,11 +174,11 @@ body{
 }
 
 .buttons button:first-child{
-    margin-right: 10%;
+    margin-right: 10px;
 }
 
 .buttons button:last-child{
-    margin-left: 10%;
+    margin-left: 10px;
 }
 
 /*định dạng 3 icon tym comments share*/
@@ -179,7 +186,7 @@ body{
     display: flex;      /*dàn hàng ngang 3 icon*/
     width: 100%;
     margin-top: 30px;   /* margin-top khoảng cách hàng trên 30px*/
-    padding: 0 5%;
+    padding: 0 5px;
     justify-content: space-between;     /*dàn đều khoảng cách giữa 3 icon*/
 }
 
@@ -200,7 +207,6 @@ body{
     content:"";
     width: 2px;     /*width độ dày ( đậm) của đường line khung icon*/
     height:100%;
-    background:#e2ece2;
     margin-left: -25px; /*margin-left: sang bên trái -25px*/
 
 }
@@ -240,10 +246,13 @@ body{
     border-radius: 50%;
     font-size: 16px;
   }
+
   .wrapper .icon i{
     position: relative;
     z-index: 9;
   }
+
+  /*lỗi-----*/
   .wrapper .icon.arrow{
     left: 600px;
     top: 150px;
