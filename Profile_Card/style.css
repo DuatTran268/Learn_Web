@@ -68,7 +68,7 @@ body{
 }
 /*định dạng chữ dòng thứ 2 dưới ảnh*/
 .wrapper .about{
-    font-weight: 400px;
+    font-weight: 400%;
     color: rgb(27, 223, 27);   /*màu chữ dòng thứ 2*/
     font-size: 16px;        /*cỡ chữ*/
 }
@@ -159,7 +159,7 @@ body{
     padding: 12px 0;
     font-size: 17px;
     font-weight: 400;   
-    border-radius: 5px;
+    border-radius: 5%;
     cursor: pointer;
     color: blue;
     z-index: 5;
@@ -167,11 +167,11 @@ body{
 }
 
 .buttons button:first-child{
-    margin-right: 10px;
+    margin-right: 10%;
 }
 
 .buttons button:last-child{
-    margin-left: 10px;
+    margin-left: 10%;
 }
 
 /*định dạng 3 icon tym comments share*/
@@ -179,7 +179,7 @@ body{
     display: flex;      /*dàn hàng ngang 3 icon*/
     width: 100%;
     margin-top: 30px;   /* margin-top khoảng cách hàng trên 30px*/
-    padding: 0 5px;
+    padding: 0 5%;
     justify-content: space-between;     /*dàn đều khoảng cách giữa 3 icon*/
 }
 

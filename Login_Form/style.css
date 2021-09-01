@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+body{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: pink;
+
+}
+
+/*đinh dạng chung cho box form*/
+.content{
+    width: 330px;       /*width: chiều rộng là 330px*/
+    background: pink;
+    border-radius: 10px;    /*border-radius: bo tròn 4 cạnh của box 10px*/
+    padding: 40px 30px;
+    box-shadow: -3px -3px 7px #1f1c1c73,
+                2px 2px 5px #1f1c1c73
+}
+
+/*định dang chữ login form*/
+.content .text{
+    font-size: 33px;    /*font-size: cỡ chữ*/
+    font-weight: 600;   /*font-weight: làm đậm của chữ*/
+    margin-bottom: 35px;        /*margin-bottom: khoảng cách lề dưới*/
+    color: #595959;    
+}
+
+/*định dạng 2 box user với password*/
+.content .field{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.field input{
+    height: 100%;
+    width: 100%;
+    padding-left: 45px;
+    font-size: 18px;
+    outline: none;
+    border: none;       /*loại bỏ border*/
+    color: #595959;
+    border-radius: 25px;    /* bo cạnh tròn 2 text box*/
+    background: rgb(231, 231, 231);
+    box-shadow: inset 2px 2px 5px #babecc,
+                inset -5px -5px 10px #ffffff;
+
+}
+
+
+/*màu chữ trong text box 1 2 khi click chuột vào*/
+.field input:focus{
+    box-shadow: inset 1px 1px 2px #babecc,
+    inset -1px -1px 2px #ffffff;
+}
+
+.field:nth-child(2){
+    margin-top: 20px;   /*khoảng cách 2 text box*/
+}
+
+
+.field span{
+    position: absolute;
+    width: 50px;    /*căn chỉnh icon*/
+    line-height: 50px; 
+    color:  violet;    /*màu icon*/
+}
+
+.field label{
+    position: absolute;
+    top: 50%;
+    left: 45px;     /*căn chữ vào trong ô*/
+    pointer-events: none;
+    color: #666666;     /*màu chữ trong 2 box*/
+    transform: translateY(-50%);
+}
+
+/* làm mất chữ trong text box 1 2 khi click vào để nhập*/
+.field input:valid ~ label{
+    opacity: 0;     /*làm mất chữ*/
+}
+
+/*định dạng chữ Forgot Password ?*/
+.forgot-pass{
+    text-align: left;   /*text-align: căn chữ về bên trái*/
+    margin: 10px 0px 10px 5px;      /*căn chỉnh chữ khoảng cách lần lượt với trên, trái, dưới, phải */
+}
+.forgot-pass a{
+    font-size: 16px;        /* định dạng cỡ chữ*/
+    color: rgb(9, 204, 9);
+    text-decoration: none;  /*bỏ gạch chân*/
+
+}
+.forgot-pass:hover a{
+    text-decoration:  underline;    /* khi di chuột vào hiện đường line lên*/
+    color: rgb(42, 5, 179);
+}
+
+
+/*định dạng nút bottom*/
+
+button{
+    margin: 15px 0;         /*margin: Khoảng cách trên dưới 15px*/
+    width: 100%;            /*width: chiều rộng của nút */
+    height: 50px;           /*height: chiều cao của nút*/
+    color: #595959;     /*màu chữ của nút*/
+    font-size: 18px;    /*font-size: cỡ chữ là 18px*/
+    font-weight: 600;       /*font-weight: chữ đậm*/
+    border: none;           /*border: loại bỏ viền nút*/
+    outline: none;          
+    cursor: pointer;
+    border-radius: 25px;        /*border-radius:  bo tròn 4 cạnh góc vuông*/
+    box-shadow: 2px 2px 5px #87878a,    /*đổ bóng viền ngoài bên trái, trên*/
+                -5px -5px 10px #aca6a673;   /* đổ bóng viền bên phải, bên dưới*/
+
+}
+
+/*tạo độ sâu khi click vào nút*/
+button:focus{
+    color: violet;
+    box-shadow: inset 2px 2px 5px #87878a,      
+                inset -5px -5px 10px #ffffff73;
+}
+
+/*định dạng dòng cuối cùng*/ 
+.signup{
+    font-size: 16px;    /*font-size: cỡ chữ*/
+    color: #595959;     /*color: màu chữ*/
+    margin: 10px 0;         /*margin: khoảng cách trên*/
+}
+
+.signup a{
+    color:rgb(42, 5, 179);        
+    text-decoration: none;          
+}
+
+.signup a:hover{
+    text-decoration: underline;
+    
+}
+/*thẻ bản quyền :v*/
+h6{
+    color: rgb(112, 109, 109);
+    font-size: 10px;    
+    margin: 30px 0px -30px 5px;      /*căn chỉnh chữ khoảng cách lần lượt với trên, trái, dưới, phải */
+}
