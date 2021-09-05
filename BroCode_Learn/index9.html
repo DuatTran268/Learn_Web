@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+
+    <form action="action_page.html" method="GET"> <!-- action: gửi thông tin đi method GET của nút submit-->
+        <!-- Thẻ tên-->
+        <div>
+          <label for="name"> Name:</label>
+        <input type="text" id="Name" name="Name" placeholder="Name" required> <!--placeholder: chữ chìm trong form | required: là bắt người dùng phải điền đủ vào form mới cho thực hiện tiếp-->
+        </div>
+
+        <br>
+        <!-- thẻ Họ tên lót-->
+        <div>
+          <label for="lname">Last Name: </label>    <!-- name="last name: có tác dụng lưu lại các tài khoản đã từng sử dụng"-->
+          <input type="text" id ="last name" name="last name" placeholder = "Last Name" required> <!--placeholder: Chữ chìm trong ô form  | required: người dùng điền đầy đủ mới cho thực hiện tiếp--> 
+        </div>
+
+        <br>
+        <!-- Thẻ mật khẩu-->
+        <div>
+          <label for="password">Password: </label>
+          <input type="password" placeholder="password" required maxlength="8">   <!--maxlength: đặt mật khẩu tối đa bao nhiêu kí tự -->
+        </div>
+        <br>
+        <div>
+          <label for="Email">Email: </label>  <!-- name="email: có tác dụng lưu lại các thông tin đã từng điền vào"-->
+          <input type="Email" id="email" name="email" placeholder="ABC@gmail.com">  
+        </div>
+
+        <br>
+        <!-- Thẻ số điện thoại-->
+        <div>
+          <label for="Phone">Phone: </label>
+          <input type="tel" id="Phone" name="Phone" placeholder="0966668888">
+        </div>
+
+        <br>
+        <!-- Thẻ ngày tháng năm theo hệ thống-->
+        <div>
+          <label for="date">birthday</label>
+          <input type="date" id="birthday" name="birthday"> <!-- input type="date": lấy ngày hệ thống-->
+        </div>
+
+        <br>
+        <!-- thẻ chọn số -->
+        <div>
+          <label for="number">Number</label>
+          <input type="number" min="0" max="20" value="1">    <!--đặt giới hạn cho số nhỏ từ 0 đến lớn nhất là 20 - và ban đầu hiển thị ra màn hinh là 1-->
+        </div>
+
+        
+        <br>
+        <!-- Các thẻ lựa chọn -->
+        <h3>Check box chọn được nhiều loại cùng lúc</h3>
+        <div>   
+          <label for="title">Title</label>
+          
+          <label for="Mr">Mr.</label>   <!-- thẻ lable: là định nghĩa nhãn tên cho thành phần input-->
+          <input type="radio" id="Mr" name="title">    <!-- id="Mr" là khi click vào chữ Mr thì được chọn -->
+          <label for="Mrs">Mrs.</label>
+          <input type="radio" name="title">    <!-- type="radio": là nút chọn được chọn nhiều thứ cùng 1 lúc -->
+          <label for="Bede">Bede.</label>
+          <input type="radio" name="title">     <!-- name="title": là chỉ được chọn 1 cái trong nhiều cái-->
+          
+        </div>  
+
+        <br>
+        <div>
+          <label for="checkbox">Check: </label>
+          <input type="checkbox">   <!--checkbox được chọn nhiều cái cùng 1 lúc-->
+          <input type="checkbox">
+          <input type="checkbox">
+
+        </div>
+
+        <h3> Thẻ select</h3>
+          <div>
+            <label for="payment">Payment:</label>
+            <select id="payment" name="payment">
+              <option value="Visa">Visa</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="Gift card">Gift card</option>
+              <option value="Bank">Bank</option>
+            </select>
+          </div>
+          
+          
+          <br>
+          <!-- nút gửi thông tin đi và nút đặt lại refresh-->
+          <div>
+            <input type="reset">    <!-- nút đặt lại về ban đầu-->
+            <input type="submit">   <!-- nút gửi thông tin đi-->
+          </div>
+
+
+        </form>
+        
+      </body>
+      </html>

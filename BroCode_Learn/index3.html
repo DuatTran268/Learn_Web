@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag List</title>
+</head>
+<body>
+    <!-- unordered list Danh sách ko có kí tự-->
+    <h3>Grocery List</h3> 
+    <ul style="list-style-type: disc">  <!-- tạo icon đầu-->
+      <!-- circle: Chấm tròn rỗng
+        square: ô vuông đen đậm
+        none: bỏ kí tự đầu dòng
+        disc: chấm tròn
+      -->
+      <li>Bread Dough</li>
+      <li>Tomato Sauce</li>
+      <li>Cheese</li>
+      <li>Peppers</li>
+    </ul>
+
+    <!-- Ordered list: -->
+    <h3>My to-do-list</h3>
+    <!-- ol: tạo số đầu mỗi thẻ-->
+    <ol type="1" start="100">   <!-- start dùng riêng trường hợp số bắt đầu từ 100-->
+      <!-- type="A" : chữ cái in hoa đầu thẻ
+                a: chữ cái in thường
+                I: chữ số la tinh
+                i: 
+                1: chữ số -->   
+      <li>record a youtube video</li>
+      <li>Go workout</li>
+      <li>bake a pizza</li>
+    </ol>
+
+
+    <!-- Description list: Danh sách miêu tả-->
+    <h3>Web Dev languages</h3>
+    <dl>
+      <dt>HTML</dt> 
+      <dd>- adds structure to web page</dd>
+      <dt>CSS</dt>
+      <dd>- adds style to web page</dd>
+      <dt>Javascript</dt>
+      <dd>- adds functions to web page</dd>
+      <dt>PHP</dt>
+    </dl>
+
+
+    <!-- ex: off a nested list-->
+    <h3>Grocery List</h3> 
+    <ul style="list-style-type: disc">  <!-- tạo icon đầu-->
+      <!-- circle: Chấm tròn rỗng
+        square: ô vuông đen đậm
+        none: bỏ kí tự đầu dòng
+        disc: chấm tròn
+      -->
+      <li>Bread Dough</li>
+      <li>Tomato Sauce</li>
+      <li>Cheese</li>
+      <li>Toping
+        <ul>
+          <li>text 1</li>
+          <li>text 2</li>
+          <li>text 3</li>
+        </ul>
+      </li>
+    </ul>
+  
+</body>
+</html>
