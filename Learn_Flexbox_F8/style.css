@@ -1,0 +1,233 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100%;
+  height: auto;
+  background-color: rgb(192, 178, 178)
+}
+
+
+/* Navbar */
+.nav{
+  min-height: 42px;
+  background-color: orangered;
+  display: flex;    /* display: flex la dan ngang hang*/
+  justify-content: space-between;    /*flex-start: mặc định nằm bên trái, flex-endl: dịch sang bên phải, center căn giữa, space-between: đẩy 2 thẻ này cách nhau xa ra dính sát bên trái phải: muốn đẹp dùng margin đẩy nó ra  */
+}
+
+.nav-list {
+  padding-left: 0;
+  margin: auto 16px;
+}
+
+.nav-item {
+  color: #ffffff;
+  list-style: none;
+  margin: 0 8px;
+  display: inline-block;
+}
+
+/* form layout */
+.form-container {
+  max-width: 720px;
+  padding: 32px;
+  margin: 36px auto 0 auto;
+  background-color: #fff;
+
+}
+
+.form__row {
+  padding: 8px 0;   /*khoảng cách giữa 2 form input*/
+  display:flex;    /*display:inline-flex:  cùng nằm trên 1 hàng*/
+
+}
+
+.form__label {
+  min-width: 90px;
+
+}
+
+.form__input {
+  flex: 1;    /*flex: 1 kéo dài chiếm hết khoảng trống cong lại, chiếm hết khoảng ko gian của main axis*/
+}
+
+/* column layout */
+.column-layout {
+  margin-top: 36px; 
+  padding: 12px 0;
+  background-color: #fff; 
+  display: flex;    /*đưa chia lên hàng ngang*/ 
+
+}
+
+.column-item{
+  padding: 0 16px;    /* tạo khoảng cách giữa các cột */
+}
+
+.sidebar-one {
+  flex: 1;        /* flex 1: chia đều bằng nhau */
+  order: 1;       /*cái nào nhỏ đứng main start mục đích sắp xếp thay đổi thứ tự trái qua phải*/
+}
+.sidebar-two {
+  flex: 1;    /* kích thước cột chia làm 1*/
+  order: 2;
+}
+.main-column{
+  flex: 2;    /* kích thước cột lớn gấp 3 so 2 cái kia*/
+  order: 3;   /*cái nào lớn đứng main end*/
+}
+
+/* feature layout */
+.feature-layout{
+  margin-top: 36px;
+  display: flex;    /* dàn hàng ngang*/
+  /*justify-content: space-between;   /*justify-content: space-between: tạo khoảng cách giữa các item xa nhau*/
+  flex-direction: column;
+  justify-content: space-evenly;  /*space-around: có thêm khoảng trống ngoài cùng bên trái bên phải| space-evenly tất cả các khoảng cách đều bằng nhau*/
+}
+/*trường hợp pc hoặc tablet*/
+@media(min-width: 740px){
+  .feature-layout{
+    flex-direction: row;
+  }
+}
+
+
+.feature-item{
+  padding: 12px 16px;   /*khoảng cách trên dưới, trái phải*/
+  margin-top: 16px;     /* khoảng cách giữa các đoạn với nhau bên trên*/
+  flex-basis: 30%;   /*flex-basic: là để xác định kích thước của main size*/
+
+}
+
+.feature-item:nth-child(1){
+  background-color: pink; 
+}
+
+.feature-item:nth-child(2){
+  background-color: violet;
+}
+
+.feature-item:nth-child(3){
+  background-color: rgb(228, 104, 59);
+}
+
+
+/* wrap layout */
+
+.wrap-layout {
+  background-color: #ffffff;
+  margin-top: 36px;
+  padding: 12px 0 32px 0;
+  display: flex;    /*dàn lên cùng 1 hàng*/
+  justify-content: space-around;
+  /*flex-wrap: wrap;    /*flex-wrap: wrap; dàn theo kích cỡ thu phóng xuống hàng nhảy xuống dưới*/
+  flex-wrap: wrap-reverse; /*khi dàn kích thước là nhảy lên trên dòng đổi chiều trục cross axis
+  */
+}
+
+.wrap-layout__item {
+  width: 148px;   /* độ rộng*/
+  height: 90px;   /* độ cao*/
+  color: #fff;    /* màu nền bên ngoài*/
+  text-align: center;   /*căn số vào giữa*/
+  line-height: 90px;    /**/
+  font-size: 48px;      /*cỡ chữ*/
+  font-weight: 700;   /*độ đậm của chữ*/
+  margin-top: 20px;       /* khoảng cách giữa các item*/
+  background-color: rgb(17, 179, 17);   /*nền của item*/
+}
+
+/* center layout */
+.center-layout {
+  background-color: #fff; 
+  margin: 36px auto 0 auto;
+  padding: 32px 0;
+  max-width: 640px;
+  height: 360px;
+  display: flex;   
+}
+
+.center-layout__item{
+  font-size: 42px;
+  font-weight: 700;
+  margin: auto;
+}
+
+
+/* Chart layout */
+
+.chart-layout {
+  margin: 36px auto 0 auto;   
+  padding: 32px 0;  
+  height: 320px;
+  background-color: #fff;
+  display: flex;    /*dàn hàng ngang*/
+  /*align-items: flex-end;    /*flex-start: xoay chuyển đấy lên trên, flex-end xoay chuyển đáy xuống dưới*/
+  justify-content: space-around;  /*dàn cách xa nhau 1 khoảng*/
+
+}
+
+
+.chart-layout__item {
+  align-self: flex-end;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+  height: var(--percent);   /*dùng chính viến percent nhận từ style*/
+  background-color: orange;
+  animation: growth ease-in 0.5s;
+}
+
+/*tạo chuyển động */
+@keyframes growth {
+  from {  /* từ */ 
+    opacity: 0;   /*độ mờ 0 */
+    height: calc(var(--percent)-50%);
+  }
+  to{
+    opacity: 1;   /*đến độ mờ là 1s*/
+    height: var(--percent);
+  }
+}
+
+
+/* END */
+
+.the-end{
+  margin: 12px auto 48px auto;   /* khoảng cách trên 12px phải: auto, dưới: 48px, trái: auto lần lượt theo chiều kim đồng hồ*/
+  padding: 32px 0;    /*khoảng cách trên dưới trái phải*/
+  max-width: 740px; 
+  min-height: 360px;
+  display: flex;    /*dàn hàng ngang*/
+  flex-direction: row-reverse;    /*đảo cột bên trái sang bên phải: đảo điểm main start và main end */
+
+}
+
+.the-end__first {
+  padding: 4px 16px;
+  background-color: aqua;
+  flex: 1;    /*chia đều layout*/
+}
+
+.the-end__second {
+  flex: 1;    /*chia đều layout*/
+  display: flex;
+  flex-direction: column;   /*flex-direction: column: đưa thành chiều ngang thành cột  | flex-direction: column-reverse: đảo lộn dưới lên trên*/
+}
+
+.the-end__second-one{
+  flex: 1;
+  padding: 4px 16px;  /*khoảng cách trên dưới, trái phải*/
+
+  background-color: orangered;
+}
+
+.the-end__second-two{
+  flex: 1;
+  padding: 4px 16px;    /*khoảng cách trên dưới, trái phải*/
+  background-color: violet;
+}
