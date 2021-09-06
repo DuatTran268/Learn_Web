@@ -15,7 +15,8 @@ body{
   min-height: 42px;
   background-color: orangered;
   display: flex;    /* display: flex la dan ngang hang*/
-  justify-content: space-between;    /*flex-start: mặc định nằm bên trái, flex-endl: dịch sang bên phải, center căn giữa, space-between: đẩy 2 thẻ này cách nhau xa ra dính sát bên trái phải: muốn đẹp dùng margin đẩy nó ra  */
+  justify-content: space-between;    /*flex-start: mặc định nằm bên trái, flex-endl: dịch sang bên phải, center căn giữa, 
+  space-between: đẩy 2 thẻ này cách nhau xa ra dính sát bên trái phải: muốn đẹp dùng margin đẩy nó ra  */
 }
 
 .nav-list {
