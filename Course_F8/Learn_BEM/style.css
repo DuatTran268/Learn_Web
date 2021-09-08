@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+ 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue";
+  background-color: #fff;
+}
+
+body > div{
+  margin:auto;
+}
+
+
+/* ===== BUTTONS */
+
+.btn{
+  display: inline-block; /*loại bỏ vấn đề của thẻ div cho dàn hàng ngang */ 
+  text-decoration: none;  /* bỏ gạch chân bở href làm*/
+  background-color: transparent; /* nền trong suốt*/
+  border: none; /* bỏ viền*/
+  outline: none; 
+  color: #fff;
+  padding: 12px 48px;   /* trên dưới  trái phải*/
+  border-radius: 50px;    /*bo tròn 4 cạnh*/
+  cursor: pointer;    /*di chuột vào lên bàn tay*/
+  min-width: 120px;
+  transition: opacity 0.2s ease;    /*opacity: độ delay khi di chuột vào*/
+
+
+}
+
+.btn--size-l{
+  padding: 16px 56px;
+
+}
+.btn--size-s{
+  padding: 8px 36px;
+}
+
+.btn:hover{
+  opacity: 0.8;   /*giảm độ mờ*/
+}
+
+/* nút cạnh nhau*/
+.btn + .btn{
+  margin-left: 20px;
+}
+
+.btn--success{
+  background-color: blue;
+
+}
+.btn--warn{
+  background-color: rgb(173, 38, 38);
+
+}
+.btn--danger{
+  background-color: rgb(63, 129, 9);
+
+}
+
+.btn--disabled{ /*nút ko bấm được*/
+  opacity: 0.5 !important;  /*giảm opacity xuống cho người dùng biết */
+  cursor: default;  /*di chuột vào ko còn pointer mà thành nút mũi tên*/
+}
