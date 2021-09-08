@@ -3,6 +3,7 @@
   padding: 0px;
   font-family: 'Poppins', sans-serif;
 }
+/* phần body*/
 body{
   width: 100%;
   height: auto;
@@ -31,7 +32,7 @@ body{
   display: inline-block;
 }
 
-/* form layout */
+/*=========== form layout =============*/
 .form-container {
   max-width: 720px;
   padding: 32px;
