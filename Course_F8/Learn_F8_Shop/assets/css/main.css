@@ -1,0 +1,575 @@
+.header{
+  height: var(--header-height);
+  background-image: linear-gradient(0, #fe6433, #f53e2d );
+  /* màu chuyển từ góc 0 độ, dưới, trên */
+
+}
+
+.header__navbar{
+  display: flex;  /*cho lên cùng 1 hàng*/
+  justify-content: space-between; /*đẩy khoảng cách ra 2 bên*/
+}
+
+.header__navbar-list{
+  list-style: none; /*bỏ icon*/
+  padding-left: 0;  /*bỏ thuộc tính cho nó sát vào bên trái*/
+  margin: 4px 0 0 0;    /*trên = 4px còn lại = 0*/
+}
+
+.header__navbar-item{
+  margin: 0 8px;    /*đẩy khoảng cách trên dưới = 0 trái phải = 8*/
+  position: relative;
+  min-height: 16px;
+
+}
+/* di chuột vào hiện qr code */
+.header__navbar-item--has-qr:hover .header__qr{
+  display: block;   /*khác none là nó hiện lại, dạng khối*/
+}
+.header__navbar-item--has-notify:hover .header__notify{
+  display: block;   /*cho nó hiện lên text thông báo*/
+}
+
+.header__navbar-item,   /*2 th nay chung nen dung css chung*/
+.header__navbar-item-link {
+  display: inline-block;    /*tính chất khối nằm trên cùng 1 hàng*/
+  font-size: 1.4rem;    /* tương đương 16px*/
+  color: var(--white-color);  /*biến var màu chữ đã khai báo bên base*/
+  text-decoration: none ;
+  font-weight: 300;   /*giảm độ to đậm của chữ đi*/
+
+}
+
+.header__navbar-item,   /*2 th nay chung nen dung css chung*/
+.header__navbar-item-link,
+.header__navbar-icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* hover khi di chuột vào các nút */
+.header__navbar-item:hover,   
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover{
+  cursor: pointer;  /*cursor: con trỏ chuột, pointer: hình bàn tay*/
+  color: rgba(255,255,255,0.7)
+  
+}
+
+.header__navbar-item--strong{
+  font-weight: 400; /*cho đậm đăng kí đăng nhập*/
+}
+
+.header__navbar-item--gach::after{  /*gạch dọc */
+  content: "";
+  display: block;
+  position: absolute;
+  border-left: 1px solid #fff;
+  height: 16px;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* định dạng icon */
+.header__navbar-icon-link{
+  color: var(--white-color);  /*dùng biến var gọi màu đã khai báo*/
+  text-decoration: none;    /*bỏ gạch chân đi*/
+}
+
+.header__navbar-icon{
+  font-size: 1.8rem;
+  margin: 0 6px;    /*trên dưới = 0 trái phải = 6*/
+
+}
+/* làm cho nút kết nối vô hiệu hóa */
+.header__navbar-title--no-pointer{
+  cursor: text; 
+  color: var(--white-color);  
+}
+
+
+/* Header QR code */
+.header__qr{
+  width: 186px;   /*chiều ngang*/
+  background-color: var(--white-color); /*màu nền*/
+  position: absolute;
+  left: 0;
+  top: 120%;
+  padding: 8px;
+  border-radius: 2px; /*bo cạnh*/
+  display: none;    /*ẩn khỏi layout*/
+  animation: fadeIn ease-in 0.6s;
+}
+/* cầu vô hình nối khi hover vào chữ để di chuột xuốn ảnh */
+.header__qr::before{
+  position: absolute;
+  left: 0;
+  top: -16px;
+  width:100%;
+  height:20px;
+  content:"";
+  display: none;
+}
+
+.header__qr-img{
+  width: 100%;
+}
+
+.header__qr-apps{
+  display: flex;  /*cho ngang hàng*/
+  justify-content: space-between; /*đẩy dàn ra khoảng cách*/
+
+}
+
+.header__qr-link:nth-child(1){   /*th đầu tiên*/
+  margin-left: 11px;
+
+}
+.header__qr-link:nth-child(2){  /*th thứ 2*/
+  margin-right: 11px;
+}
+
+.header__qr-download-img{
+  height: 14px;
+
+}
+
+
+/* Header notification */
+.header__notify{
+  position: absolute;
+  top: 150%;
+  right: 0;
+  border: 1px solid #d3d3d3;
+  width: 404px;
+  background-color: var(--white-color);
+  cursor: default;    /*bỏ chuột bàn tay do ảnh hưởng từ cha thông báo*/
+  transform-origin: calc(100% - 20px) top;   /*transform-origin: thuộc tính chỉ ra được cái tâm của cáu transform  , lùi vào 80px trên top để hiển thị*/
+  animation: headerNotifyGrowth ease-in 0.2s;    /*Tên animation kiểu chuyển động thời gian chuyển động */
+  display: none;   /* ẩn vào*/
+}
+/*tạo khối giả nhọn thông báo*/
+.header__notify::before{
+  content:"";
+  border-width: 20px 26px;
+  border-style:  solid;
+  border-color:  transparent transparent var(--white-color) transparent;
+  position: absolute;
+  right: 6px;
+  top: -28px;
+}
+/* làm cầu nối chữ thông báo với box */
+.header__notify::after{
+  content:"";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -16px;
+  width: 90px;
+  height: 20px;
+}
+
+@keyframes headerNotifyGrowth{
+  from{
+    opacity: 0;   /*hiện lên mờ dần*/
+    transform: scale(0);
+  }
+  to{
+    opacity: 1;   /*hiện lên dần*/
+    transform: scale(1);
+  }
+}
+
+
+.header__notify-header{
+  height: 40px;
+  background: var(--white-color);
+}
+
+.header__notify-header h3{
+  color: #999;
+  margin: 0 0 0 12px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 40px;
+  user-select: none;    /*ko copy được*/
+
+}
+
+.header__notify-list{
+  padding-left:  0;
+}
+.header__notify-item{
+  display: flex;
+}
+
+.header__notify-item:hover{
+  background-color: #f7f7f7;
+}
+
+.header__notify-item--viewed{
+  background-color:  rgba(238, 77, 45, 0.08);
+
+}
+
+.header__notify-link{
+  display: flex;
+  width: 100%;    /*cho chiếm hết chiều ngang*/
+  padding: 12px;
+  text-decoration: none;
+
+}
+.header__notify-img{
+  width: 48px;
+  object-fit: contain;
+
+}
+.header__notify-info{
+  margin-left: 12px;
+
+}
+.header__notify-name{
+  display: block;
+  font-size: 1.4rem;
+  color: var(--black-color);
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+.header__notify-descriotion{
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: rgb(37, 196, 37);
+  margin-top: 4px;  /*nội dung với khoảng cách trong thông báo*/
+
+ }
+
+ /* làm nút xem tất cả */
+.header__notify-footer {
+  display: flex;    /*flex cho vào giữa*/
+}
+.header__notify-footer-btn{
+  text-decoration: none;  /*loại bỏ gạch chân*/
+  color: var(--text-color);   /*biến var màu chữ*/
+  width: 100%;    /*chiều rộng của box de di chuot bam vao */
+  padding:8px 0;    /*khoang cach tren duoi = 8, trai phai = 0*/
+  font-size: 1.4rem;    /*cỡ chữ*/
+  font-weight: 400;   /*màu đậm cho chữ*/
+  text-align: center;   /*căn giữa*/
+}
+
+
+/*=========== Authe modal ==============*/
+.auth-form{
+  border-radius: 5px;
+  width: 500px;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
+
+.auth-form__container{
+  padding: 0 32px;
+
+}
+
+/* Đăng kí đăng nhập */
+.auth-form__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;  /*trên dưới = 0 trái phải = 12*/
+  margin-top: 10px;
+}
+/* đăng kí */
+.auth-form__heading{
+  font-size: 2.2rem;  /*cỡ chữ*/
+  font-weight: 400; /*Độ dày chữ 400*/
+  color: var(--text-color);
+}
+/* Nút đăng nhập */
+.auth-form__switch-btn{
+  font-size: 1.6rem;
+  color: var(--primary-color);  /*màu chữ biến var base.css*/
+  font-weight: 450;
+  cursor: pointer;   /*di chuột vào hiện bàn tay*/
+}
+/* Làm box input */
+/* .auth-form__form{
+} */
+.auth-form__input{
+  width: 100%;    /*chiều rộng box*/
+  height: 40px;   /*chiều cao box*/
+  margin-top: 16px;   /*khoảng cách giữa các box */
+  padding: 0 12px;    /*khoảng cách trên dưới = 0, trái phải 12*/
+  font-size: 1.4rem;  /*cỡ chữ trong box*/
+  border-radius: 5px;
+  border: 1px solid var(--border-color);    /*độ dày viền 1px, kiểu nét liền, màu biến var bên base.css*/
+  outline: none;  /*khi click vào box input ko hiện viền */
+
+}
+/* lớp giả */
+.auth-form__input:focus{
+  border-color: #888;
+}
+
+/*=========== Điều khoản và dịch vụ =========*/
+.auth-form__aside{
+  margin-top: 18px;
+
+}
+/* Định dạng cho chữ  */
+.auth-form__policy-text{
+  font-size: 1.2rem;  /*cỡ chữ 1.2 rem <=> 12px*/
+  line-height: 1.8rem;  /*chiều cao chữ*/
+  text-align: center; /*căn chữ ra chính giữa*/
+  padding: 0 12px;  /*trên dưới = 0, trái phải 12px*/
+
+}
+.auth-form__text-link{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+/* 2 nút trở lại đăng kí */
+.auth-form__controls{
+  display: flex;
+  justify-content: flex-end;    /*justify-content: căn chình phần tử thei chiều ngang: flex-end đưa về điểm cuối của trục main axis*/
+  margin-top: 80px;   /*khoảng cách với bên trên 80px*/
+}
+
+
+.auth-form__controls-back{
+  margin-right: 8px;  /*khoảng cách giữa 2 nút*/
+}
+
+
+/* Facebook google */
+.auth-form__socials{
+  background: #F5F5F5;
+  padding: 16px 36px;
+  display: flex;  /*căn giữa*/
+  justify-content: space-between; /*đẩy ra 2 đầu*/ 
+  margin-top: 22px;   
+
+}
+
+.auth-form__socials-icon{
+  font-size:1.8rem;
+}
+
+.auth-form__socials--fb{
+  color: var(--white-color);
+  background-color: #0b84ee;
+}
+
+.auth-form__socials--fb
+.auth-form__socials-icon{
+  color: var(--white-color);
+}
+
+
+.auth-form__socials-title{
+  margin: 0 26px;
+}
+
+.auth-form__socials--gg{
+  color: #666;
+  background-color: var(--white-color);
+}
+
+
+/* Login form layout=============== Định dạng form login */
+
+.auth-form__help{
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.auth-form__help-link{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #939393;
+}
+.auth-form__help-separate{
+  display: block;
+  height: 22px;
+  margin: -4px 16px 0;
+  border-left: 1px solid #eaeaea;
+
+}
+.auth-form__help-forgot{
+  color: var(--primary-color);
+
+}
+
+/*----------- header with search -------------- */
+.header-with-search{
+  height: var(--header-with-search-height);
+  display: flex;  /*cho nằm vào chính giữa*/
+  align-items: center;   /*căn giữa chiều cao trục cross axis = center*/
+  margin: 0 8px;  /*trên dưới = 0, trái phải = 8*/
+}
+
+.header__logo{
+  width: 200px;
+}
+
+.header__logo-img{
+  width: 150px;
+  color: (var(white-color));
+}
+
+.header__search{
+  flex: 1;
+  height: 40px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  display: flex;  /*cho trong shop vào text input*/
+  align-items: center;
+}
+
+.header__cart{
+  width:  150px;
+  text-align: center;
+
+}
+
+.header__cart-icon{
+  font-size: 2.4rem;
+  color: var(--white-color);
+  margin-top: 6px;    /*khoảng cách so voi top*/
+}
+/* Làm box input */
+.header__search-input-wrap{
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+
+.header__search-input{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  padding: 0 16px;    /*cho chữ cách trái*/
+  border-radius: 5px;
+
+}
+
+.header__search-select{
+  border-left: 1px solid #e8e8e8;
+  padding-left: 16px;
+  position: relative;
+  cursor: pointer;
+  width: 160px;
+}
+
+.header__search-select-lable{
+  font-size: 1.4rem;;
+  color: var(--text-color);
+}
+.header__search-select-icon{
+  font-size: 1.2rem;
+  color: #7e7e7e;
+  margin: 0 16px 0 8px;
+  position: relative;
+  top: 1px;
+}
+
+/* icon search */
+.header__search-btn{
+  background-color: var(--primary-color);
+  border: none;
+  height:36px;
+  width: 60px;
+  border-radius: 3px;
+  margin-right: 3px;
+  outline: none;
+  
+}
+
+.header__search-btn:hover{
+  background-color: #ff6344;  /*màu khi hover vào*/
+  cursor: pointer;    /*con trỏ hình bàn tay*/
+}
+
+.header__search-btn-icon{
+  font-size: 1.4rem;
+  color: var(--white-color);
+}
+.header__search-select:hover .header__search-option{
+  display: block;   /*hiện nó lên*/
+}
+.header__search-option{
+  position: absolute;
+  right: 0;
+  top: 120%;    /*khoảng cách trên :ddd*/
+  width: 120px;
+  list-style: none; /*bỏ dấu . thẻ li*/
+  box-shadow: 0 1 2px #e0e0e0;   /*đổ bóng*/
+  padding-left: 0;
+  border-radius: 3px;
+  display: none;   /* ẩn đi khi di chuột vào selecton mới hiện lên */
+  animation: fadeIn ease-in 0.3s;
+
+}
+
+.header__search-option::before{    /*lơp giả cho lên trước*/
+  content:"";
+  display: block;
+  width: 100%;
+  height: 20px;   /*to ra mới với được*/
+  position: absolute;
+  top: -15px;   /*giảm xuống 15px để lên*/
+  left: 0;
+}
+
+
+.header__search-option-item{
+  background-color: var(--white-color);
+  border-radius: 3px;
+  padding: 8px 8px;
+}
+
+/* .header__search-option-item:first-child{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.header__search-option-item:last-child{
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+} */
+
+
+
+.header__search-option-item:hover{
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.header__search-option-item span{
+  font-size: 1.4rem;
+  color: var(--text-color);
+  margin-left: 8px;
+
+}
+
+.header__search-option-item i{
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-left: 0 0 0 12px;
+  display: none;
+
+}
+.fas.fa-check{
+  padding: 5px;
+}
+
+.header__search-option-item--active i{
+  display: inline-block;
+}
+
+

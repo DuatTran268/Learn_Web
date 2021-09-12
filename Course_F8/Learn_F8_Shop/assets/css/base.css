@@ -1,0 +1,156 @@
+:root{
+  --primary-color: #ee4d2d;   /*màu chính*/
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --border-color: #dbdbdb;
+  --header-height: 120px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+  box-sizing: inherit;  /* kế thừa thẻ chứa nó có thuộc tính box-sizing*/
+}
+
+html{
+  /* 100% được hiểu là 16px */
+  /* font-size: 100%;*/
+
+  /* làm những cái mặc định chung cho trong wed */
+  font-size: 62.5%;   /*1 rem = 10px*/
+  line-height: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  /*sans-serif: Ko có chân chữ */
+
+  box-sizing: border-box;   /*thẻ to nhất tất cả các element trong trang web kế thừa nó*/
+
+}
+
+/* p{
+  /*font-size: 1.2rem;    /* hiểu là 1.2 rem = 12px*/
+  /* font-size: 1rem;    1 rem của 100% = 16px */
+/*} */
+
+/*============ Chuẩn bị nền móng cho phần responsive =====  */
+.grid{
+  width: 1200px;  /*chiều rộng*/
+  max-width: 100%;  /* chiều ngang tối đa*/
+  /* Với những màn hình có kích thước lớn hơn 1200 thì kích thuowcs tối đa của class grid nó chỉ là 1200 những màn hình có kích thước nhỏ hơn 1200 thì max-width có tác dụng làm giảm kích thước của class grid bằng với kích thước của màn hình */
+  margin: 0 auto;   /* căn giữa khối này trên dưới = 0, trái phải auto*/
+}
+
+/* trường hợp ko muốn sử dụng cái width là 1200 thì thêm class dưới này vào */
+.grid__full-width{
+  width: 100%;
+}
+
+/* Những thẻ được chứa nằm trong class này thì cùng nằm trên 1 hàng ngang */
+.grid__row{
+  display: flex;   /*có trục main axis nằm ngang*/
+  flex-wrap: wrap;  /*để cho những th con có tổng độ dài vượt quá grid__row này sẽ bị nhảy xuống hàng*/
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* to ra cho form */
+@keyframes growth{
+  from {
+    transform: scale(var(--growth-form));   /*scale phóng lên*/
+  }
+  to{
+    transform: scale(var(--growth-to)); 
+  }
+}
+
+
+/*============= Modal ================= */
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;    /*căn giữa trung tâm cho margin: auto*/
+}
+
+.modal__overlay{
+
+  position: absolute;   /*con của modal nó lấy modal làm gốc tọa độ chính*/
+  width: 100%;    /*chiếm hết toàn bộ màn hình*/
+  height: 100%;
+  background-color: rgba(0,0,0, 0.3);   /*màu đen và độ trong suốt*/
+  z-index: 1; /*z-index: quyết định cái nào nằm trên cái nào nằm dưới , trường hợp này 1 ở dưới*/
+  animation: fadeIn linear 0.1s;   /*hàm hiện dần lên*/
+
+}
+.modal__body{
+  --growth-from: 0.7;
+  --growth-to: 1;
+  /* width: 300px;
+  height: 300px; */
+  margin: auto;     /*tự động căn giữa*/
+  position: relative;   /*làm nổi lớp dưới lên trên lớp modal*/
+  z-index: 2;   /*quyết định 2 nằm trên nên 2 nổi lên*/
+  animation: growth linear 0.1s;
+}
+
+/* ==== button style chung nên css bên base ====*/
+
+.btn{   /*cái gì chung css vào đây*/
+  min-width: 142px;   /*min- width: chiều ngang tối thiểu 142px*/
+  height: 34px;   /*chiều cao*/
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /*bô cạnh*/
+  font-size: 1.3rem;
+  padding: 0 12px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  background: none;
+  /*định dạng cho fb và google*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6rem;
+}
+
+
+.btn.btn-normal:hover{
+  background-color: rgba(0,0,0,0.05);
+}
+
+.btn.btn--size-s{
+  height: 32px;
+  font-size: 12px;  /*giảm cỡ chữ*/
+  padding: 0 8px;
+}
+.btn.btn--primary{    /*riêng css vào đây*/
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.btn.btn--disable{
+  color:#949494;
+  cursor: default;
+  /* filter: brightness(80%); */
+  background: #c3c3c3;
+
+}
+
+/*màu nhiều cho google*/
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
