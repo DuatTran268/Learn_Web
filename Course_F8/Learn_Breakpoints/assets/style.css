@@ -1,0 +1,41 @@
+body{
+    background-color: greenyellow;
+    display: flex;      /*đưa lên  1 hàng ngang*/
+    height: 100vh;
+}
+
+.mobile,
+.tablet,
+.pc {
+    margin: auto;       /*khoảng cách lề trên dưới trái phải auto*/
+    font-size: 100px;       /* cỡ chữ*/
+    color: #fff;        /* màu chữ*/
+    display: none;         /*ẩn đi */
+}
+
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em){      /*nhỏ hơn là dùng max-width */
+    .mobile{
+        display: block;
+    }
+
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){ /*từ 740 đến 1023 */
+    /*vì lớn hơn hoặc bằng 740 nên dùng min-width: và nhỏ hơn 1024 nên dùng max-width*/
+    .tablet{
+        display: block;
+    }
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em){
+    /* lớn hơn hoặc bằng 1024 là dùng min-width  => cứ dấu bé dùng dấu lớn và dấu lớn thì dùng dấu bé*/ 
+    .pc{
+        display: block; /*display: block được viết sau nên độ ưu tiên hơn display none*/
+    }
+}
+
+/* Khi sử dụng media query : px, rem, or em  ?  | em là vượt qua tất cả */
