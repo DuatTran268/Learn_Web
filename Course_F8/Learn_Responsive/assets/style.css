@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 10px auto 360px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+/* Product */
+.main__product {
+    display: flex;
+    padding: 10px;
+}
+
+.main__product-img {
+    width: 40%;
+    padding-top: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.main__product-info {
+    width: 60%;
+    padding: 10px;
+}
+
+/* Column layout */
+.column-layout {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+    text-align: justify;        /*căn chữ đều 2 bên*/
+}
+
+.column-layout__category {
+    width: 20%;
+    padding: 0 16px;
+}
+
+.column-layout__container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column-item {
+    width: 25%;
+    padding: 0 16px;
+}
+
+/* Feature layout */
+.feature-layout {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+
+}
+
+.feature-item:nth-child(1) {
+    background-color: rgb(192, 227, 222);
+}
+
+.feature-item:nth-child(2) {
+    background-color: rgb(227, 200, 192);
+}
+
+.feature-item:nth-child(3) {
+    background-color: rgb(226, 192, 227);
+}
+
+/* CSS cái chung cho cả mobile và tablet */
+@media only screen and (max-width: 63.9375em){  /*max-width: 63.9375em : từ 0 đến 1024px*/
+    .main__product {
+        flex-direction: column-reverse;     /*đưa về dạng cột chũ ở trên đầu*/ 
+    }
+    .main__product-info {
+        width: 100%;    /* chiều rộng của chữ là 100%*/
+    }
+    .main__product-desc{
+        display: none;      /*ẩn chữ nội dung khi sử dụng ipad or mobile*/
+    }
+}    
+
+
+
+/* css riêng cho Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .main__product-img{
+        width: 95%;     /*cho chiều rộng ảnh lên*/
+        padding-top: 85%;       /*tăng thêm padding ko ảnh thành hcn*/
+    }
+    /* course */
+    .column-layout__container{
+        width: 100%;
+    }
+    .column-layout__category{
+        display: none;      /*ẩn danh mục đi*/
+    }
+    .column-item{
+        width: 50%;
+        /* text-align: center; */
+        text-align: justify;
+    }
+    .feature-layout{
+        flex-direction: column;     /*cho về dạnh cột khi sử dụng điện thoại*/
+
+    }
+}
+
+/* cs riêng cho Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    /* product */
+    .main__product-img{
+        width: 85%;     /*cho chiều rộng ảnh lên*/
+        padding-top: 85%;       /*tăng thêm padding ko ảnh thành hcn*/
+    }
+    /* course */
+    .column-item{
+        width: 33.33333%;       /*chia làm 3 cột của 100% cho ipad*/
+        text-align: justify;        /*căn chữ đều 2 bên*/
+
+    }
+}
