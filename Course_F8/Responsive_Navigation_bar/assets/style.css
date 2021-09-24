@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+
+
+/*========== Layout Mobile nav =============*/
+.nav__bars-btn {
+    /*icon nav*/
+    width: 28px;
+    /*chiều rộng, cao của icon*/
+    height: 28px;
+    color: #fff;
+    margin-left: 8px;
+    /*lề trái khoảng cách 8px*/
+    display: none;
+    /*bth thì ẩn icon đi ở pc*/
+}
+
+.nav__overlay {
+    position: fixed;
+    /*tỉ lệ với màn hình*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    /*0.3 độ trong suốt*/
+    display: none;
+    /*ẩn đi*/
+    animation: fadeIn linear 0.2s;
+    /*hiệu ứng khi click vào nút navbar thu gọn*/
+}
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    /*chiều rộng của nav mobile*/
+    max-width: 100%;
+    /*chiều ngang tối đa*/
+    background-color: #fff;
+    transform: translateX(-100%);
+    /*translateX: trục nằm ngang -100% mặc định ẩn về bên trái*/
+    opacity: 0;
+    /*vừa núp ẩn ra ngoài màn hình vừa opacity = 0*/
+    transition: transform linear 0.2s, opacity linear 0.2s;
+    /*cho thanh navbar trượt từ ngoài vào*/
+
+}
+
+.nav__mobile-list {
+    margin-top: 24px;
+    list-style: none;
+
+
+}
+
+.nav__mobile-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.nav__mobile-close {    /*css cho icon X đóng*/
+    width: 28px;
+    height: 28px;
+    font-size: 1.4rem;
+    color: #666;
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    cursor: pointer;        /*bàn tay chỉ*/
+
+
+}
+
+.nav__input {
+    display: none;
+    /*ẩn ô checkbox*/
+}
+
+
+/* check vào input lớp overlay hiện lên */
+.nav__input:checked~.nav__overlay {
+    /*checked: lớp giả khi click vào checkbox mới hiện lên*/
+    display: block;
+}
+
+.nav__input:checked~.nav__mobile {
+    transform: translateX(0%);
+    /*khi là mobile click vào thì hiện ra block khối navbar*/
+    opacity: 1;
+    /*khi click trả về vị trí ban đầu và cho nó = 1*/
+}
+
+/* max-width: nhỏ hơn */
+@media (max-width: 1023px) {
+
+    /*nhỏ hơn 1023 coi nó là mobile*/
+    .nav__bars-btn {
+        display: block;
+        /* khi lên mobile thì hiện icon ra */
+        cursor: pointer;        /*biểu tượng bàn tay chỉ*/
+    }
+
+    /* Trường hợp mobile thì ẩn thanh navbar pc đi hiện mình icon */
+    .nav__pc {
+        display: none;
+        /*hiện icon thì ẩn thanh navbar */
+    }
+
+}
+
+@keyframes fadeIn {
+
+    /*hiệu ứng chuyển điibn*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
