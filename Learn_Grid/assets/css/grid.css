@@ -1,0 +1,54 @@
+.grid{
+  /* grid: full-width, chiếm hết chiều ngang đối tượng chứa ( cha) */
+  width: 100%;
+  display: block;   /*đề phòng thẻ nó ko có tính chất block thì cái grid vẫn hoạt động đúng*/
+  padding: 0;   /*tránh ảnh hưởng kích thước grid*/
+}
+
+.grid.wide{
+  max-width: 1200px;    /*mặc định 100% kế thừa hết chiều ngang, nếu chiều nganh lớn hơn 1200px thì sẽ giới hạn tại đây*/
+  margin: 0 auto;   /*trên dướ = 0, trái phải auto*/
+}
+
+.row{
+  display: flex;    /*đưa cái item nằm ngang*/
+  flex-wrap: wrap;    /*mặc định ko xuống dòng, ở đây cho vào để tự động xuống dòng*/
+  margin-left: -4px;
+  margin-right: -4px;
+
+
+}
+
+
+/* Chỉ hoạt động trên tablet  */
+/* tablet - PC low */
+@media (min-width:740px) and (max-width:1023px){
+  .wide{
+    width: 644px;
+  }
+}
+/* độ phân giải lớn hơn tablet */
+@media (min-width: 740px){
+  .row{
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}
+/* Pc trở lên */
+@media (min-width: 1113px){
+  .row{
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}
+
+/* PC low  */
+@media (min-width: 1024px) and (max-width: 1239px){
+  .wide{
+    width: 940px;
+  }
+  .wide .row{
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+}

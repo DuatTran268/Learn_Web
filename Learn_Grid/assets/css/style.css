@@ -1,0 +1,14 @@
+body {
+  margin: 0;    /*bỏ khoảng đệm lề 2 bên*/
+}
+
+.container {
+  background-color: pink;
+  text-align: center;   /*căn chữ ra giữa*/
+}
+h1{
+  padding: 100px 0 ;  /*trên dưới 100px, trái phải = 0px*/
+  font-size: 100px;
+  color: #fff;
+  margin: 0; /*bỏ khoảng cách*/
+}
