@@ -1,0 +1,48 @@
+html, body{
+  margin: 0;
+}
+
+.box{
+  width: 100%;
+  height: 120px;
+  background: pink;
+}
+
+/* Tạo hình vuông 50*50 trong hình chữ nhật của class box */
+/* before */
+.box::before{
+  content:"Đây là before";   /*content quan trọng vì nó giúp element giả có thể tồn tại được mặc dù nó là 1 chuỗi rỗng*/
+  color: #fff;
+  display: block;   /*dạng khối*/
+  width: 50px; 
+  height: 50px;
+  background-color: aqua;
+
+}
+/* after */
+.box::after{
+  content:"Đây là after";   /*content quan trọng vì nó giúp element giả có thể tồn tại được mặc dù nó là 1 chuỗi rỗng*/
+  color: #fff;    /*định dạng màu cho chữ*/
+  display: block;   /*dạng khối*/
+  width: 50px; 
+  height: 50px;
+  background-color: violet;
+
+}
+/* first-letter: làm cho chữ cái, kí tự đầu tiên to lên */
+h1::first-letter{ 
+  font-size: 50px;
+  color: red;
+}
+
+/* first-line: dòng đầu tiên */
+h1::first-line{
+  font-size:50px; /*luôn luôn css cho dòng đầu tiên chịu ảnh hưởng của element giả first-line*/
+  color:coral;
+}
+
+/* selection: bôi đen chuột lựa chọn, nếu bỏ element đi thì ::selection cho toàn bộ chữ trên website */
+h1::selection{
+  background-color: violet;
+  color: aqua;
+}

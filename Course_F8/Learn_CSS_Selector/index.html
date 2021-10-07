@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <!-- Element "phần tử" -->
+  <h1> Heading 1</h1>
+  <h2> Heading 2</h2>
+  <p> Paragraph 1</p>
+  <p> Paragraph 2</p>
+
+  <!-- Class "Lớp" -->
+  <p class="paragraph p1">Paragraph 1"đoạn văn 1"</p>
+  <p class="paragraph p1">Paragraph 1"đoạn văn 1"</p>
+  <div class="paragraph">Paragraph 2</div>
+
+  <!-- === Class children "thẻ con" là con của các class parent "thẻ cha" -->
+  <!-- Đây là trường hợp1 .children là con trực tiếp của thẻ .parent  -->
+  <div class="parent">
+    <div class="children">Children 1</div>
+    <div class="children">Children 2</div>
+    <div class="children">Children 3</div>
+  </div>
+
+  <!-- Đây là trường hợp 2 children"con" nằm rải rác miễn là con của .parent "cha"-->
+  <div class="parent">
+    <div class="children">Children 1</div>
+    <div class="other-div">
+      <div class="children">Children 2</div>
+      <div class="other-div">
+        <div class="children">Children 3</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BT -->
+
+  <div>
+    <p class="paragraph p1">Đại diện lãnh đạo tỉnh Thanh Hóa cho rằng</p>
+    <p class="paragraph p2">Đại diện lãnh đạo tỉnh Thanh Hóa cho rằng</p>
+    <p class="paragraph p3">Đại diện lãnh đạo tỉnh Thanh Hóa cho rằng</p>
+  </div>
+
+  <!-- BT css -->
+  <div>
+    <div class="container">
+      <div>
+        <div class="box">A box</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- bài học Đặt biến trong CSS -->
+  <div>
+    <h3>CSS Variable "đặt biến trong CSS"</h3>
+    <h5>h5</h5>
+    <h4>h4</h4>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+/* Chọn toàn bộ tất cả các thẻ html ta sử dụng selector * (bộ chọn *) */
+/* ================================================== */
+*{
+  /* reset css */
+  padding: 0;
+  margin: 0;
+}
+
+/*======== css chỉ riêng element ( css cho các thẻ element p (phần tử b) ======*/
+p{
+  color: rebeccapurple;
+}
+
+h2{
+  color: red;
+}
+
+/*=========== Css cho các thẻ có class là paragraph và p1 ===========*/
+.paragraph.p1{  /*viết liền 2 class là css cho cả 2 class*/
+  color:violet;
+}
+/* css chỉ riêng cho class paragraph */
+.paragraph{
+  color: green;
+}
+
+/* ========= Css cho các thẻ có class là con của thẻ có class parent */
+
+.parent .children{    /*viết cách là css cho th con của th cha chứa nó*/
+  color:aqua;
+}
+
+/* ============= CSS BT */
+.paragraph.p2{
+  color: red;
+}
+
+/* ============== CSS BT BOX các cách dưới đây */
+div >.box{
+  color: rgb(0, 255, 76);
+}
+
+.container div div{
+  color: rgb(124, 82, 89);
+}
+
+
+/* CSS bài học đặt biến Variable */
+:root{    /*lớp giả*/
+  /* Đê đặt tên biến sử dụng 2 dấu gạch ngang --Tênbien */
+  --text-color: rgb(204, 0, 0);
+}
+
+h3{
+  /* sử dụng biến cục bộ chỉ sử dụng riêng được trong thẻ h3 */
+  --my-color: green;
+  color: var(--my-color);
+}
+
+h5{
+  /* sủ dụng css function (hàm) biến var */
+  color: var(--text-color);
+}
+
+h4{
+  color: var(--text-color);
+}
+
+
+
+

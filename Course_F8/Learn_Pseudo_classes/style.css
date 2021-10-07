@@ -1,0 +1,36 @@
+html, body{
+  margin: 0;
+}
+
+.box{
+  width: 100%;
+  height: 120px;
+  background: pink;
+}
+
+/* :root: tham chiếu phần tử gốc file html */
+
+/* hover: kích hoạt khi di chuột lên */
+.box:hover{
+  background-color: aqua;
+}
+h1:hover{
+  color: green;
+}
+
+/* active: click và dữ chuột thì sẽ kích hoạt các thuộc tính này lên */
+.box:active{
+  background-color: blue;
+}
+h1:active{
+  color: orangered;
+}
+
+/* first-child : lớp giả select đứa con đầu tiên*/
+li:first-child{
+  color: rgb(255, 0, 0);
+}
+
+li:last-child{
+  color:rgb(39, 182, 51);
+}
