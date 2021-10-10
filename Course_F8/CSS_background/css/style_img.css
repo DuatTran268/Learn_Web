@@ -1,0 +1,59 @@
+html, body{
+  margin: 0;
+}
+
+.header{
+  width: 100%;
+  height: 100vh;
+  /* =========== HỌC VỀ BACKGROUND IMG ============ */
+  /* background-image: 
+  url(https://scontent.fvca1-3.fna.fbcdn.net/v/t1.6435-9/s1080x2048/109310836_346029133059686_763381782154842733_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=EcOKvjBuytQAX_wSoQD&tn=bHZXpc0n0SnOzUp7&_nc_ht=scontent.fvca1-3.fna&oh=7bbfbe0f17d67d99c9b220858a60cf9b&oe=6184280F); */
+  background-size: 100%;   /*set cho chiều ngang, chiều cao auto*/
+  background-repeat: no-repeat;   /*bỏ đi việc lặp lại các background*/ 
+  /* Repeat: lặp lại toàn bộ
+    repeat-x: lặp lại chiều ngang
+    repeat-y: lặp lại chiều dọc
+  */
+
+
+  /*
+  linear-gradient: là dải màu chuyển được bắt đầu từ
+  0: là gốc tọa độ từ 0-> 360độ , màu chuyển, điểm cuối của dải màu chuyển
+  ĐỘ: kí hiệu deg
+   */
+  /* background-image: linear-gradient(0, #333, #ccc); */
+
+  /*  */
+  background-image: linear-gradient(0, rgba(255,255,0,0.5), rgba(0,0,255,0.5)),
+  url(https://scontent.fvca1-3.fna.fbcdn.net/v/t1.6435-9/s1080x2048/109310836_346029133059686_763381782154842733_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=EcOKvjBuytQAX_wSoQD&tn=bHZXpc0n0SnOzUp7&_nc_ht=scontent.fvca1-3.fna&oh=7bbfbe0f17d67d99c9b220858a60cf9b&oe=6184280F);
+
+  /* Background-size-keyword:;
+  background-size: contain;   sẽ lấy chiều dài nhất của bức ảnh "đảm bảo yếu tố ko bị che khuất, cắt xén của hình ảnh,"
+
+  background-zize: cover;   chọn cạnh dài bức ảnh, chấp nhận việc che khuất bức ảnh
+  */
+
+  /* ===================HỌC VỀ BACKGROUND_ORIN ==========*/
+  border: 20px dashed #ccc;
+  padding:20px;
+  box-sizing: border-box;
+  
+  /* Đổ hình ảnh của background từ border vào */
+  background-origin: border-box;  
+
+  /* đổ nền hình ảnh từ padding vào  */
+  background-origin: padding-box;
+
+  /* đổ nền hình ảnh từ content vào*/
+  background-origin: content-box;
+
+
+
+  /* Viết dài dòng */
+  background-image: url(https://scontent.fvca1-3.fna.fbcdn.net/v/t1.6435-9/s1080x2048/109310836_346029133059686_763381782154842733_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=EcOKvjBuytQAX_wSoQD&tn=bHZXpc0n0SnOzUp7&_nc_ht=scontent.fvca1-3.fna&oh=7bbfbe0f17d67d99c9b220858a60cf9b&oe=6184280F);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* Viết ngắn gọn */
+  background:url(https://scontent.fvca1-3.fna.fbcdn.net/v/t1.6435-9/s1080x2048/109310836_346029133059686_763381782154842733_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=e3f864&_nc_ohc=EcOKvjBuytQAX_wSoQD&tn=bHZXpc0n0SnOzUp7&_nc_ht=scontent.fvca1-3.fna&oh=7bbfbe0f17d67d99c9b220858a60cf9b&oe=6184280F) no-repeat center / contain;
+}

@@ -1,0 +1,118 @@
+html, body {
+  margin: 0;
+}
+
+.box{
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Đưa lên cùng 1 chiều ngang: float: left */
+  /* float: left; */
+}
+
+.box1{
+  background-color:aqua;
+
+}
+
+.box2{
+  background-color: orangered;
+  /* Học về ============ MARGIN "Tạo khoảng cách, ko hiểu là lớp bao bọc"================ 
+  =>  margin phụ thuộc vào kích thước trình duyệt margin , khi margin quá vượt quá kích thước nội dung thẻ chứa thì sẽ xuống hàng 
+  => Margin ko làm cho tăng kích thước của element lên 
+  -di chuyển tạo khoảng cách bên trên 20px*/
+  /* margin-top: 20px;   
+  margin-left: 30px; */
+
+  /* Viết ngắn gọn */
+  /* Cho cả 4 hướng*/
+  margin: 30px;
+
+  /*3 giá trị lần lượt là: trên 10px, trái phải 20px, dưới 30px*/
+  /* margin: 10px 20px 30px; */
+
+  /* 4 giá trị theo chiều kim đồng hồ: trên, phải, dưới, trái*/
+  /* margin: 20px 25px 30px 35px; */
+}
+
+.box3{
+  background-color: violet;
+
+  /* ======== HỌC VỀ PADDING ============== */
+  /* Css cho box 3 , padding: đệm thêm vào, đẩy cả background*/
+  /* padding-top: 10px;   
+  padding-right: 10px; 
+  padding-bottom: 10px;
+  padding-left: 10px;  /*đệm thêm vào bên trái 10px */
+  
+  /* Viết ngắn gọn cho padding 4 hướng*/
+  padding: 10px;
+
+  /*viết 2 tham số giá trị sẽ là hiểu
+  trên dưới = 10px   trái phải = 15px*/
+  /* padding: 10px 15px;  */
+
+  /* Viết 3 tham số hiểu lần lượt là
+  trên 10px, trái phải = 15px, dưới = 20px*/
+  /* padding: 10px 15px 20px; */
+  /* Trên -> phải -> dưới -> trái chiều kim đồng hồ */
+
+
+  /*============== HỌC VỀ BORDER ========================== */
+  /* border là lớp vỏ, lớp viền ôm 1 cái element (phần tử) nên có kí hiệu là đường nét liền */
+  /* border-top-width: 10px;
+  border-right-width: 10px;
+  border-bottom-width: 10px;
+  border-left-width: 10px; */
+
+  /* CSS Cho mình top bỏ đi các chiều khác vì mặc định kiểu border-style: solid là 2px */
+  /* border-top-width: 10px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-style: solid;
+  border-color: #333; */
+
+  /* Viết ngắn gọn hẳn: border: kích thước 4 xung quanh  kiểu border  màu border */
+  border: 10px solid #333;
+
+  /* Viết kiểu ngắn set cho từng vị trí VD: viết cho ở trên */
+  border-top: 10px solid #333;
+}
+
+
+/* =============== CSS CHO BOX SIZING ===============*/
+.box6{
+  width: 100px;   /*set kích thước chiều ngang dọc*/
+  height: 100px;
+  color: #fff;
+  background-color: greenyellow;
+  margin: 50px;
+
+  /*tạo khoảng cách giữa phần viền và nội dung bài viết
+  - nếu sử dụng padding thì sẽ bị tăng kích thước của element"phần tử lên" nên phải tính toán trừ lùi cho kích thước được set ban đầu, => ko hiệu quả :)))
+  - hiệu quả hơn ta sử dụng thuộc tính box-sizing để giải quyết
+  */
+  padding: 16px;    /*tạo đệm khoảng đều 4 hướng là 16px*/
+  border: 2px solid #333;
+  /*nếu như chưa có thuộc tính box-sizing thì kích thước sẽ bị tăng lên vượt quá kích thước set theo design là 100 nên cần sử dụng thuộc tính box-sizing để set cho nó = kích thước ban đầu*/
+  box-sizing: border-box;   
+  /*khi có box-sizing: thì kích thước sẽ là mặc định kích thước ban đầu được set cho thẻ cần css*/
+  /* Nguyên tắc hoạt động của box-sizing là:
+  chiều ngang và chiều cao của element"phần tử" sẽ bằng tổng kích thước border + padding + content 
+  - content sẽ tự động tính toán = cách kích thước khai báo ban đầu được set là 100px - kích thước của border: 2px; - kích thước của paading: 16px; => sẽ ra kích thước của contend
+
+  => lưu ý đặt kích thước padding quá lớn sẽ ko giữ được kích thước tổng ban đầu được set
+
+  Thường sử dụng trong base css, apply dựng base xây dựng web
+
+  */
+}
+
+/* Hủy đi thuộc tính boz-sizing "ghi đè" */
+/* .box6{
+  box-sizing: unset;
+} */
