@@ -61,11 +61,17 @@ body{   /*định dạng toàn trang*/
 .box input[type = "submit"]:hover{
     background:rgb(65, 202, 88);    /* màu khi chạm vào phần login*/
 }
-h6{ /*by Tran Nhat Duat*/
-    color: yellow;      /* color màu chữ*/
-    font-size: 12px;        /*font-size cỡ chữ*/
-    text-align: center;      /*text-align: căn chữ vào giữa*/   
-    text-transform: none;   /* text-transfom: phông chữ : ko*/
-    padding: 550px;         /* padding: căn lề so với top 550px*/
+
+
+.box .copyright{
+    display:block;      /*bỏ thuộc tính block của thẻ a*/
+    font-family: sans-serif;
+    font-size: 1em;
+    margin-top: 36px;
+    color: #fff;
+    text-decoration: none;
+}
+.box .copyright:hover{
+    color: red;
 }
 
