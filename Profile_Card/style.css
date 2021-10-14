@@ -198,8 +198,13 @@ body{
     cursor: pointer;
     position: relative;     /*kéo ngắn kích cỡ bằng icon*/
 }
+.social-share .row .fa-heart:hover{
+    color: red;
+}
 
-
+.social-share .row .fa-comment:hover{
+    color: blue;
+}
 
 /*kẻ chia vùng cho icon*/
 .social-share .row::before{
