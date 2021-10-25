@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;     /*font chu*/
+}
+
+
+body, html {
+    background: #f2f2f2;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+nav{
+    background: #1b1b1b;    /*nền của thanh Menu*/
+    position: fixed;        /*cố định thanh menu*/
+    width: 100%;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+/*the lam logo may lang thang*/
+nav .logo{
+    float: left;        /*nam vi tri ben trai*/
+    color: white;       /*chu mau trang*/
+    font-size: 27px;        /*co chu*/
+    font-weight: 600;
+    line-height: 70px;      /*khoang cach voi  top tren cung la 70px*/ 
+    padding-left: 60px;     /*khoang cach voi ben trai 1 khoang 60px*/
+
+}
+
+nav ul{
+    float: right;    /*dàn hàng ngang menu  đưa đẩy về bên phải*/
+    list-style: none;
+    margin-right: 40px; /*cách 1 khoảng về bên phải 40px*/
+    position: relative;
+    
+}
+nav ul li{
+       /*Dàn thang menu qua bên trái*/
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;  /*khoangr cach giua cac menu*/
+}
+
+nav ul li a{
+    color: white;   /*mau chu menu*/
+    text-decoration: none;
+    line-height: 70px;      /*chieu cao thanh menu*/
+    font-size: 18px;
+    padding: 8px 15px;      /*dan khoang cach giua cac menu */
+}
+nav ul li a:hover{
+    color: cyan;            /*mau chu trong o menu*/
+    border-radius: 15px;        /*bo goc canh menu*/
+    box-shadow: 0 0 5px #33ff99,   /*di chuot cham vao menu hover mau len*/
+                0 0 5px #0aa37d; 
+}
+
+nav ul ul li a:hover{
+    color: cyan; /*mau chu trong o menu*/
+    box-shadow: none;       /*ko có kẻ ô ở menu cấp*/
+}
+
+
+nav ul ul{
+    position: absolute;     /*thu chia menu cap 2 ve khuon cap 1*/
+    top: 90px;              /*khoang cach tu menu cap 2 voi top tren cung*/
+    border-top: 3px solid rgb(221, 16, 204);    /*vien bodder duoi menu chinh cap 1*/
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;   /*do delay menu cap 2 3 khi cham menu cap chinh*/
+}
+nav ul ul ul{
+    border-top: none; /*ko co border o menu cap 2 den cap 3*/
+}
+
+nav ul li:hover > ul{
+    top: 70px;          /*khoang cach menu cap 2 voi thanh menu chinh*/       
+    opacity: 1;
+    visibility: visible;        /*di chuot vao menu cap 1 hien cap 2 di cap 2 hien cap 3*/
+
+}
+
+nav ul ul li{
+    position: relative;     /*dan dai menu cap 2*/
+    margin:0px;
+    width: 150px;       /*do rong cua menu cap 2*/
+    float: none;
+    display: list-item;     /*thu menu cap 3 ve cung menu cap 2*/
+    border-bottom: 1px solid red;
+}
+
+nav ul ul li a{
+    line-height: 50px;  /*khoang cach giua cac o menu cap */
+    
+}
+
+nav ul ul ul li{
+    position: relative;
+    top: -70px;     /*thu vaof morre*/
+    left: 150px; /*phan chia menu xem them cap 3 cua cap 2 theo muc ve ben trai*/
+
+}
+
+
+
+
+
+
+
+  
