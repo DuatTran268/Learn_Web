@@ -1,0 +1,67 @@
+body{
+  display: flex;
+  flex-direction: column;
+  /* align-item: center: căn giữa theo chiều dọc */
+  align-items: center;
+  justify-content: center;
+}
+
+.pc,
+.tablet,
+.mobile{
+  font-size: 68px;
+
+  /* ẩn đi sử dụng display = none */
+  display: none;    
+
+}
+
+/* max-width: là kích thước chiều ngang tối đa (nhỏ hơn 800px thì đoạn mã trong ngoặc được thực hiện  */
+@media (max-width:800px){
+  .pc,
+  .tablet,
+  .mobile{
+  color: red;
+  }
+}
+
+/* Media queries device pc tablet mobile*/
+
+/*  PC: width >= 1024px => width lớn hơn 1024px thì coi là PC
+    Tablet: >=740px and < 1024px    =>   width lớn hơn hoặc bằng 740px và nhỏ hơn 1024px là tablet
+    Mobile: < 740px       => width nhỏ hơn 740px trở về 0 là mobile
+*/
+
+
+/* 
+PC: width >= 1024px => width lớn hơn 1024px thì coi là PC
+nếu width: chiều rộng mà lớn hơn 1024px thì thực thi đoạn code ở class PC  */
+@media (min-width: 1024px){
+  .pc{
+    color: red;
+    display: block;
+  }
+}
+
+/* 
+Tablet: >=740px and < 1024px    =>   width lớn hơn hoặc bằng 740px và nhỏ hơn 1024px là tablet
+nếu width : chiều rộng lớn hơn 740px và (and) nhỏ hơn 1024px thì khối code ở class tablet thực thi */
+@media (min-width: 740px) and (max-width: 1024px){
+  .tablet{
+    color: violet;
+    display: block;
+    /* display: block     => hiển thị nó lên*/
+  }
+}
+
+/* 
+Mobile: < 740px       => width nhỏ hơn 740px trở về 0 là mobile
+nếu width: chiều rộng nhỏ hơn 740px thì thực hiện code ở class mobile */
+@media (max-width: 740px){
+  .mobile{
+    color: yellow;
+    display: block;
+  }
+}
+
+
