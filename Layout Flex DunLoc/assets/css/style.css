@@ -9,6 +9,7 @@
 
 body {
   font-size: 16px;
+  /* sans-serif: chủng chữ ko gạch chân */
   font-family: 'Poppins', sans-serif;
   line-height: 1;
 }
@@ -29,6 +30,7 @@ img {
 
 /* variable color */
 :root {
+  /* :root is pseudo classes lớp giả */
   --color-total: #18cca5;
   --text-title: #000;
   --bgr-btn: #c0f8eb;
@@ -51,6 +53,7 @@ img {
   margin-bottom: 30px;
 }
 .works__title::after {
+  /* ::after pseudo elements */
   content: '';
   position: absolute;
   width: 40px;
@@ -61,7 +64,7 @@ img {
   border-radius: 20px;
 }
 
-/* wrapper__menu layout */
+/* work navigation */
 .works__nav {
   display: flex;
   justify-content: space-between;
@@ -88,6 +91,7 @@ img {
   background-color: var(--color-total);
   color: white;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .works__btn {
@@ -96,14 +100,16 @@ img {
   padding: 5px 16px;
   color: var(--color-total);
   border-radius: 20px;
+  cursor: pointer;
 }
 
-/* wrapper__image layout css*/
+
+/* image-list layout css*/
 .image-list {
   display: flex;
   flex-wrap: wrap;
   /* Sau khi tính kích thước item và dùng margin-left thì nó sẽ bị đẩy thằng đầu
-  ví vậy dùng margin số âm để kéo lại */
+  nên dùng margin số âm để kéo lại */
   margin-left: -20px;
 }
 
@@ -119,12 +125,16 @@ img {
   border-radius: 10px;
 }
 
+/* device tablet, ipad */
 @media (max-width: 1023px) {
   .image-list__item {
     /* Kỹ thuật dùng biến trong responsive */
+    /* device tablet, ipad 2 column */
     --col: 2;
   }
 }
+
+/* device mobile */
 @media (max-width: 735px) {
   .works__right {
     margin: 0 auto;
@@ -133,6 +143,7 @@ img {
     margin-bottom: 15px;
   }
   .image-list__item {
+    /* device mobile 1 column*/
     --col: 1;
   }
 }
