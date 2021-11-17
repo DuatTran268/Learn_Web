@@ -1,0 +1,47 @@
+/* reset trang web */
+*{
+  margin: 0;
+}
+.block{
+  display: block;
+}
+.block__element{
+  text-align: center;
+}
+
+.block__element a{
+  float: left;
+  margin: 30px 30px;
+  text-decoration: none;
+  margin-top: 50px;
+  padding: 10px 29px;   /*đệm vào*/ 
+  border-radius: 35px;
+  color: #fff;  
+  border: 1px solid #ccc;
+  
+}
+.block__element a:hover{
+  opacity: 0.5;
+  
+}
+
+.block__element .youtube a{
+  background-color: red;
+}
+
+.block__element .facebook a{
+  background-color: #0774e8
+}
+
+.block__element .webIT a{
+  background-color: rgb(26, 187, 26);
+}
+
+.block__element .Blogs a{
+  background-color: orange;
+}
+
+.block__element .Relax a{
+  background-color: violet;
+}
+

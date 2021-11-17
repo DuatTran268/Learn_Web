@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <!-- Các thẻ  -->
+
+
+
+   <!-- html có 3 loại danh sách 
+   - danh sách ko có thứ tự   unordered list
+   - danh sách có thứ tự      ordered list
+   - danh sách mô tả          description list
+
+   -- để tạo danh sách ko có thứ tự sử dụng phần tử ul viết tắt của unordered list
+   -- để tạo mục của danh sách sử dụng phần tử li, viết tắt của list item 
+
+   => cú pháp
+   -->
+   <!-- Code phần danh sách ko có thứ tự unordered list -- ul -->
+   <h3>Ko có thứ tự unordered lis - ul</h3>
+   <ul>
+      <li>Phần tử 1</li>
+      <li>Phần tử 2</li>
+      <li>Phần tử 3</li>
+   </ul>
+
+   <ul>
+      <li>C++</li>
+      <li>C#</li>
+      <li>HTML, CSS</li>
+      <li>React, PHP, ...</li>
+      <li>Javascript</li>
+      <li>Java</li>
+      <li>Python</li>
+   </ul>
+
+
+   <!-- code phần danh sách có thứ tự ordered list -- ol -->
+   <h3>Có thứ tự ordered list - ol</h3>
+   <ol>
+      <li>C++</li>
+      <li>C#</li>
+      <li>Javascript</li>
+      <li>html, css</li>
+      <li>React, PHP, Nodejs, ...</li>
+      <li>Java, Python</li>
+   </ol>
+
+   <!-- với loại danh sách có thứ tự thì giá trị bắt đầu là 1, I, i, A, a để thay đổi cho giá trị đứng đầu, bắt đầu, sử dụng thuộc tính attribute start -->
+   <h3>Có thứ tự có thể thay đổi giá trị </h3>
+   <ol type="a">
+      <ul>C++</ul>
+      <ul>C#</ul>
+      <ul>Javascript</ul>
+      <ul>Html, css</ul>
+      <ul>Java, Python</ul>
+   </ol>
+
+   <h3>Danh sách mô tả</h3>
+   <dl>
+      <dt>Mục 1</dt>       
+      <dd>Định nghĩa cho mục 1</dd>    <!--Viết thụt vào 1 đơn vị để chú thích-->
+      <dt>Mục 2</dt>
+      <dd>Định nghĩa cho mục 2</dd>
+      
+      <dt>HTML</dt>
+      <dd>Hypertext Markup Language - HTML là ngôn ngữ đánh dấu siêu văn bản (ko phải là ngôn ngữ lập trình )</dd>
+      <dt>WWW</dt>
+      <dd>World Wide Web - Hiểu là không gian thông tin mạng toàn cầu </dd> 
+   </dl>
+
+   <h3>Danh sách lồng nhau</h3>
+   <ol>
+      <li>Ngôn ngữ lập trình
+         <ul>C++ </ul>
+         <ul>C# - OOP - Object Oriented Programming - Lập trình hướng đối tượng</ul>
+         <ul>Javascript</ul>
+         <ul>Java</ul>
+         <ul>Python</ul>
+      </li>
+
+      <li>Ngôn ngữ đánh dấu
+         <ul>HTML - Hypertext Makeup Language</ul>
+         <ul>CSS  - Cascading Style Sheets</ul>
+      </li>
+      <li> Framework
+         <ul>React Js - Ngôn ngữ trên Javascript</ul>
+         <ul>Nodejs</ul>
+         <ul>Angular - Ngôn ngữ trên Javascript</ul>
+         <ul>Ruby</ul>
+         <ul>ASP.net   - Ngôn ngữ trên C#</ul>
+         <ul>Vue</ul>
+
+      </li>
+   </ol>
+
+
+
+</body>
+
+</html>

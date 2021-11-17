@@ -1,0 +1,58 @@
+1.5 Câu hỏi ôn tập
+
+Câu hỏi 1. WWW là viết tắt của?
+
+A. Wordl Wide Wed
+
+B. World Wide Web	// đáp án B ( World Wide Web hiểu là ko gian thông tin mạng toàn cầu)
+
+C. Word Wide Web
+
+D. Word Wibe Web
+
+Câu hỏi 2. URL là gì?
+
+A. Một giao thức trong Internet
+
+B. Xác định tên của một máy tính trên mạng
+
+C. Định vị một tài nguyên cụ thể trên web	// đáp án C: URL viết tắt của Uniform Resource Locator: hiểu đơn giản là địa chỉ của website
+
+D. Một chuẩn trong truyền dữ liệu trên web
+
+Câu hỏi 3. The Web is an information system where documents and other web resources are identified by Uniform Resource Locators 
+(URLs, such as https://example.com/), which may be interlinked by ________, and are accessible over the Internet.
+// Dịch: web là một hệ thống thông tin có các tài liệu và tài nguyên được xác định bởi URL( địa chỉ website) ví dụ như https:// ....)
+	, chúng được liên kết với nhau bởi hyperlinks ( siêu liên kết ) và truy cập thông qua internet 
+
+A. URL
+
+B. pages
+
+C. computers
+
+D. hyperlinks			// đáp án D: hyperlinks: siêu liên kết
+
+Câu hỏi 4. HTML là viết tắt của?
+
+A. HyperText Makeup Language
+
+B. HTTP Technology Model Language
+
+C. HyperText Markup Language		// Đáp án C: Hiểu là ngôn ngữ đánh dấu siêu văn bản:	( ko phải ngôn ngữ lập trình, mà nó là ngôn ngữ đánh dấu)
+
+D. HyperTest Makeup Language
+
+Câu hỏi 5. Trình duyệt web là một ứng dụng phần mềm để truy cập thông tin trên World Wide Web. 
+Mỗi trang web, hình ảnh và video riêng lẻ được xác định bằng một _________ riêng biệt, 
+cho phép các trình duyệt truy xuất và hiển thị chúng trên thiết bị của người dùng.
+
+A. công nghệ
+
+B. mã HTML
+
+C. liên kết
+
+D. URL				// Đáp án D vì URL là một định vị tài nguyên cụ thể trên website
+
+Đáp án: 1(B), 2(C), 3(D), 4(C), 5(D)
