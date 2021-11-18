@@ -1,0 +1,339 @@
+/* reset css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: tahoma, arial, sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #696969;
+}
+a:hover,
+a:hover>p{
+  color: #818753;
+
+}
+p{
+  font-size: 18px;
+
+}
+
+/* container section*/
+.container{
+  width: 1200px;
+  margin: 0 auto;
+
+}
+
+/* menu section */
+.menu{
+  /* margin: top 20px left, right 0px,bottom 30px */
+  margin: 20px 0px 30px;
+  text-align: center;
+
+}
+
+.menu ul > li {
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.menu img{
+  margin:0px 20px -20px; 
+  
+}
+
+.menu img:hover{
+  opacity: 0.5;
+
+}
+
+/* slice section */
+.slice{
+  margin-top: 30px;
+  /*position: relative; đặt làm mốc th cha */
+  position: relative;
+
+}
+.slice > img{
+  width: 100%;
+}
+
+.slice .left{
+  width: 350px;
+  position: absolute;
+  left: 75px;
+  top: 210px;
+
+}
+
+.slice .left > h2{
+  font-size: 80px;
+  color: #333;
+}
+.slice .left>p{
+  margin-top:20px;
+}
+
+.button{
+  padding: 15px 50px;
+  background-color: #758dba;
+  border-radius:25px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0px ;
+}
+
+.slice .right{
+  /* vị trí con tương đối position: absolute; phụ thuộc vào thẻ cha chứa nó là position: relative;  */
+  position: absolute; 
+  bottom: 100px;
+  right: 90px;
+}
+
+.hidden{
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  margin-right: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 36px;
+
+}
+.hidden:hover{
+  color: #333;
+}
+
+
+
+/* banner section */
+.banner{
+  margin-top:20px;
+}
+
+.banner__left{
+  width: 680px;
+  height: 590px;
+  margin-right: 20px;
+  float: left;
+  background-image: url('../img/banner_3.jpg');
+  background-size: cover;
+  position: relative;
+  
+}
+.banner__right{
+  width: 500px;
+  height: 700px;
+  float: left;
+  background-image: url('../img/banner_4.jpg');
+  background-size: cover;
+  position: relative;
+
+}
+
+.text--left{
+  position: absolute;
+  left: 420px;
+  bottom: 76px;
+  font-size: 60px;
+  color: #555;
+}
+
+.view--1{
+  position: absolute;
+  bottom: 50px;
+  left: 440px;
+  text-transform: uppercase;
+
+}
+/* banner text -right */
+.text--right{
+  position: absolute;
+  left: 30px;
+  top: 155px;
+  font-size: 60px;
+  color: #555;
+}
+
+.view--2{
+  position: absolute;
+  top: 310px;
+  left: 30px;
+  text-transform: uppercase;
+
+}
+
+
+/* content product */
+#title{
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.product--img,
+.layer--2__name,
+.price,
+.buy{
+  width: 285px;
+  margin-left: 20px;
+  float: left;
+}
+
+.product--img:first-child,
+.layer--2__name:first-child,
+.price:first-child,
+.buy:first-child{
+  /* css cho đứa con đầu tiên */
+  margin-left: 0;
+
+}
+.product--img{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.product--img img{
+  transform: scale(1.0);
+}
+
+.product--img img:hover{
+  transform: scale(1.5);
+  transition: all 0.5s ease;
+}
+
+.layer--2__name >p{
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+
+.price{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;   /*font-weight: bold*/
+  color: #818753;
+  margin-bottom: 20px;
+
+}
+
+.price >span{
+  font-size: 25px;
+}
+
+.buy{
+  text-align: center;
+}
+
+/* banner - bottom section */
+.banner--3{
+  width: 680px;
+  height: 350px;
+  margin-right: 20px;
+  float: left;
+  background-image: url(../img/banner_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner--4{
+  width: 500px;
+  height: 470px;
+  float: left;
+  background-image: url(../img/banner_2.jpg);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.text--left2{
+  position: absolute;
+  left: 495px;
+  bottom: 120px;
+  font-size: 60px;
+  color: #555;
+}
+
+.view--3{
+  position: absolute;
+  bottom: 90px;
+  left: 495px;
+  text-transform: uppercase;
+
+}
+/* banner text -right */
+.text--right2{
+  position: absolute;
+  left: 366px;
+  top: 155px;
+  font-size: 60px;
+  color: #555;
+}
+
+.view--4{
+  position: absolute;
+  top: 305px;
+  left: 365px;
+  text-transform: uppercase;
+
+}
+
+/* footer section */
+.about{
+  width: 400px;
+  /* float left hiển thị trên cùng 1 dòng */
+  float: left;
+}
+.about__left{
+  width: 70px;
+  height: 38px;
+  margin: 15px 20px 0px 0px;
+  float: left;
+  
+}
+
+.text__right{
+  font-size: 15px;
+  color: #555;
+  width: 240px;
+  float: left;
+
+}
+
+.contact{
+  width: 300px;
+  float: left;
+
+}
+
+.contact p{
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.contact > span{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.link{
+  width: 500px;
+  float: left;
+
+}
+
+.link p{
+  font-size: 16px;
+  margin-top: 45px;
+  color: #555;
+}
