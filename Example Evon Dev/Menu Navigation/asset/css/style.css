@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  background-color: pink;
+}
+ul, ol{
+  list-style: none;
+}
+
+
+.header{
+  background-color: white;
+}
+
+.header__inner{
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Thằng cha chứa thuộc tính position relative */
+  position: relative;
+}
+
+.header__log > img{
+  width: 2rem;
+}
+
+.header__menu{
+  display: flex;
+  align-items: center;
+}
+
+.menu__item{
+  margin: 0 1rem;
+  /* Thằng cha chứa thuộc tính position relative
+  position: relative; */
+}
+
+.menu__item:hover .menu__child{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.menu__child{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  /* ẩn nó đi để khi hover vào sử dụng thuộc tính transition */
+  opacity: 0;
+  visibility: hidden;
+  /* có thể dùng display none để ẩn  */
+  transition: .25s;
+}
+
+.menu__child-item{
+  width: 25%;
+
+}
+
+.menu__child-item > h4{
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 2rem;
+  background-color: violet;
+}
+
+.menu__child-list > li{
+  padding: 1.5rem;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  
+}
+
+.menu__link{
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4rem;
+  display: block;
+  padding: 2rem;
+}
+
+
+
