@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Band | Duat</title>
+  <link rel="shortcut icon" href="./assets/img/duat.jpg">
+
+  <!-- link font text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- link font icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <!-- link css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <!-- Icon bars -->
+      <label for="mobile__input" class="bar">
+        <i class="fas fa-bars"></i>
+      </label>
+
+      <!-- Input dùng để bắt sự kiện click thay vì dùng javascripts -->
+      <input type="checkbox" class="mobile__input" id="mobile__input" hidden>
+
+      <!-- Lớp phủ -->
+      <label for="mobile__input" class="overlay"></label>
+
+      <!-- Menu -->
+      <ul class="header__menu">
+
+        <!-- Icon close -->
+        <label for="mobile__input" class="close">
+          <i class="fas fa-times"></i>
+        </label>
+
+        <li class="header__item">
+          <a href="#" class="header__link">Home</a>
+        </li>
+        <li class="header__item">
+          <a href="#about" class="header__link">Band</a>
+        </li>
+        <li class="header__item">
+          <a href="#tour" class="header__link">Tour</a>
+        </li>
+        <li class="header__item">
+          <a href="#contact" class="header__link">Contact</a>
+        </li>
+        <li class="header__item">
+          <a href="#" class="header__link">
+            More
+            <i class="fas fa-sort-down"></i>
+          </a>
+          <ul class="header__down">
+            <li class="header__down-item">
+              <a href="#" class="header__down-link">More 1</a>
+            </li>
+            <li class="header__down-item">
+              <a href="#" class="header__down-link">More 2</a>
+            </li>
+            <li class="header__down-item">
+              <a href="#" class="header__down-link">More 2</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="header__search">
+        <a href="#" class="header__icon">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!--  -->
+  <div class="slide">
+    <div class="slide__inner">
+      <h3 class="slide__title">New York</h3>
+      <span class="slide__description">The atmosphere in New York is lorem ipsum.</span>
+    </div>
+  </div>
+  <!-- the band section -->
+
+  <div id="about" class="about">
+    <div class="about__inner">
+      <h2 class="about__title">The Band</h2>
+      <p class="about__slogan">We love music</p>
+      <p class="about__content">
+        We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+        id est laborum consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+
+      <div class="about__member">
+        <div class="about__menu">
+          <div class="about__item">
+            <p class="about__name">Name</p>
+            <img src="./assets/img/bandmember.jpg" alt="" class="about__img">
+          </div>
+          <div class="about__item">
+            <p class="about__name">Name</p>
+            <img src="./assets/img/bandmember.jpg" alt="" class="about__img">
+          </div>
+          <div class="about__item">
+            <p class="about__name">Name</p>
+            <img src="./assets/img/bandmember.jpg" alt="" class="about__img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- tour date -->
+  <div id="tour" class="tour">
+    <div class="tour__inner">
+      <h2 class="tour__title">Tour Dates</h2>
+      <div class="tour__slogan">Remember to book your tickets!</div>
+      <ul class="tour__dates">
+        <li class="tour__date">
+          <div class="tour__month">
+            September
+            <span class="tour__sell">Sold out</span>
+          </div>
+        </li>
+        <li class="tour__date">
+          <div class="tour__month">
+            October
+            <span class="tour__sell">Sold out</span>
+          </div>
+        </li>
+        <li class="tour__date">
+          <div class="tour__month tour__month--number">
+            November
+            <span class="tour__number">3</span>
+          </div>
+        </li>
+      </ul>
+      <!-- ticket -->
+      <div class="tour__ticket">
+        <div class="tour__menu">
+          <!-- 1 -->
+          <div class="tour__item">
+            <div class="tour__image">
+              <img src="./assets/img/newyork.jpg" alt="new york" class="tour__img">
+            </div>
+            <div class="tour__content">
+              <p class="tour__address">New York</p>
+              <p class="tour__time">Fri 27 Nov 2016</p>
+              <p class="tour__desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button class="tour__button">Buy Tickets</button>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="tour__item">
+            <div class="tour__image">
+              <img src="./assets/img/paris.jpg" alt="new york" class="tour__img">
+            </div>
+            <div class="tour__content">
+              <p class="tour__address">Paris</p>
+              <p class="tour__time">Sat 28 Nov 2016</p>
+              <p class="tour__desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button class="tour__button">Buy Tickets</button>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="tour__item">
+            <div class="tour__image">
+              <img src="./assets/img/sanfran.jpg" alt="new york" class="tour__img">
+            </div>
+            <div class="tour__content">
+              <p class="tour__address">San Francisco</p>
+              <p class="tour__time">Sun 29 Nov 2016</p>
+              <p class="tour__desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button class="tour__button">Buy Tickets</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact" class="contact">
+    <h2 class="contact__title">Contact</h2>
+    <div class="contact__slogan">Fan? Drop a note!</div>
+    <div class="contact__content">
+
+      <div class="contact__right">
+        <div class="contact__item">
+          <i class="fas fa-map-marker-alt"></i>Chicago, US
+        </div>
+        <div class="contact__item">
+          <i class="fas fa-phone-alt"></i>Phone: +00 151515
+        </div>
+        <div class="contact__item">
+          <i class="fas fa-envelope"></i> Email: mail@mail.com
+        </div>
+      </div>
+
+      <div class="contact__right">
+        <div class="contact__form">
+          <!-- input name, mail -->
+          <div class="contact__row">
+            <input class="contact__input" type="Email" placeholder="Email">
+            <input class="contact__input" type="Email" placeholder="Email">
+          </div>
+
+          <!-- input message -->
+          <input class="contact__message" type="text" placeholder="Message">
+          <div class="contact__button">
+            <button class="contact__btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="maps">
+    <img src="./assets/img/map.jpg" alt="" class="maps__image">
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-snapchat"></i></a>
+      <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <div class="footer__copy">
+      <p> &copy; Copyright 2021 by <a href="https://www.facebook.com/tran.duat.2368" target="_blank">Duat Tran</a></p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
