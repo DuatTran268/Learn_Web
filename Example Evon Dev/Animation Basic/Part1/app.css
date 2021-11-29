@@ -1,0 +1,32 @@
+/* animation */
+.ring{
+  width: 50px;
+  height: 50px;
+  border-radius: 100rem;
+  border: 5px solid #6a5af9;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  animation: spinner 1s infinite alternate;
+  /* animation: tên class | thời gian chạy từ 0 độ đến 360 độ  | nếu để chạy 1 lần để 1, chạy mãi vô tận để infinite | delay 1s| kiểu chạy chậm đều linear  */
+
+}
+
+@keyframes spinner{
+  /* from: ở 1 thời điểm nào đó nó chạy đến vị trí hiện tại : current */
+  from {
+    /*from là chạy từ trạng thái nào đó tới current: trạng thái bình thường hiện tại */
+    /* transform: rotate(0); */
+
+
+  }
+  to{
+    /* to: là từ current hiện tại chạy tới to 1 cái nào đó*/
+    transform: rotate(360deg);
+  }
+
+
+  /* 
+  Muốn cho nó xoay thì sử dụng transform: rotate(360deg)
+    
+  */
+}
