@@ -1,0 +1,138 @@
+/* reset css base */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* variable color */
+:root {
+  --color-total: #18cca5;
+  --text-title: #000;
+  --bgr-btn: #c0f8eb;
+}
+
+/* work wrapper */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* title layout css */
+.works__title {
+  position: relative;
+  color: var(--text-title);
+  font-weight: 500;
+  font-size: 25px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+.works__title::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-total);
+  border-radius: 20px;
+}
+
+/* wrapper__menu layout */
+.works__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.works__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.works__item {
+  margin-right: 20px;
+  padding: 6px 20px;
+  border: 1px solid var(--color-total);
+  border-radius: 20px 0px 20px 20px;
+  cursor: pointer;
+}
+
+.works__item:hover {
+  background-color: var(--color-total);
+  color: white;
+  cursor: pointer;
+}
+
+.works__btn {
+  background-color: var(--bgr-btn);
+  border: none;
+  padding: 5px 16px;
+  color: var(--color-total);
+  border-radius: 20px;
+}
+
+/* wrapper__image layout css*/
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* Sau khi tính kích thước item và dùng margin-left thì nó sẽ bị đẩy thằng đầu
+  ví vậy dùng margin số âm để kéo lại */
+  margin-left: -20px;
+}
+
+.image-list__item {
+  --col: 4;
+  /* Dùng biến để tiện cho việc responsive */
+  /* Công thức tính: calc((100% - số cột) - khoảng cách item) */
+  width: calc((100% / var(--col)) - 20px);
+  height: 200px;
+  /* Khoảng cách giữa các item và kết hợp với margin số âm ở thằng cha */
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1023px) {
+  .image-list__item {
+    /* Kỹ thuật dùng biến trong responsive */
+    --col: 2;
+  }
+}
+@media (max-width: 735px) {
+  .works__right {
+    margin: 0 auto;
+  }
+  .works__item {
+    margin-bottom: 15px;
+  }
+  .image-list__item {
+    --col: 1;
+  }
+}
