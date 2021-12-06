@@ -1,0 +1,160 @@
+/* device tablet pc*/
+@media only screen and (max-width: 1023px) {
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .product__item {
+    --col: 2;
+    margin-bottom: 2rem;
+    width: 46%;
+  }
+  .intro__img {
+    width: 30rem;
+  }
+  .intro__content {
+    width: 40rem;
+    margin-top: -1rem;
+  }
+  .intro__title {
+    font-size: 2rem;
+  }
+  .intro__desc {
+    margin: 2rem 0;
+    font-size: 1.4rem;
+  }
+  .intro__p {
+    font-size: 1.4rem;
+  }
+  .intro__category-item {
+    margin-bottom: 0;
+  }
+  .intro__category-title {
+    font-size: 1.2rem;
+  }
+  .partner__line {
+    display: none;
+  }
+  .partner__inner {
+    max-width: 100%;
+  }
+  .partner__logo {
+    margin-top: 2rem;
+  }
+  .connect__img {
+    width: 46%;
+  }
+}
+
+/* device mobile */
+@media only screen and (max-width: 735px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .header__bars {
+    display: block;
+    font-size: 2rem;
+  }
+  .header__list {
+    display: none;
+  }
+  .header__button {
+    margin-left: 0;
+  }
+  .header__btn {
+    padding: 0.6rem 2rem;
+    font-size: 1.2rem;
+  }
+  .banner__title {
+    font-size: 2rem;
+    /* text-align: center; */
+  }
+  .banner {
+    max-width: 100%;
+  }
+  .banner__description {
+    font-size: 1.6rem;
+  }
+  .product__item {
+    width: 100%;
+  }
+  .intro__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .intro__img {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .intro__content {
+    width: 100%;
+  }
+  .intro__button {
+    text-align: center;
+  }
+  .intro__wrapper2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .intro__category-item {
+    flex-basis: 35%;
+  }
+  .partners {
+    display: none;
+  }
+  .product__title{
+    font-size: 2rem;
+  }
+  .connect__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .connect__desc {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .connect__img {
+    width: 100%;
+  }
+  .contact__inner {
+    flex-wrap: wrap;
+  }
+  .contact__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .contact__logo {
+    text-align: center;
+  }
+  .footer {
+    margin-bottom: 2rem;
+  }
+  .footer__top {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer__menu1 {
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .footer__menu {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+  .footer__line {
+    margin-top: 5rem;
+  }
+  .footer__down {
+    flex-wrap: wrap;
+  }
+  .footer__contact {
+    text-align: center;
+  }
+  .footer__copy {
+    text-align: center;
+  }
+}
