@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+ul, ol{
+  list-style: none;
+}
+img{
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+a{
+  text-decoration: none;
+}
+:root{
+  --color-main: #f6b11a;
+  --white-color: #fff;
+  --text-color: #573f1e;
+  --color-text: #7e776e;
+  --color-footer: #291704;
+}
+.grid{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 6px;
+}
