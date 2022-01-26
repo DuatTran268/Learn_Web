@@ -1,0 +1,43 @@
+/* base css */
+:root{
+  --white-color: #fff;
+  --black-color: #000;
+  --yellow-main: #ffba00;
+  --text-color: #777777 !important;
+}
+
+/* reset css */
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+
+/* ul, ol{
+  list-style: none;
+
+} */
+
+img{
+  display: block;
+  max-width: 100%
+}
+
+.grid{
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
