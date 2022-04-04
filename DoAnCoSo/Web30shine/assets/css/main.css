@@ -137,15 +137,14 @@ body {
 a {
   text-decoration: none !important;
 }
-.home .container{
+.home .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
   width: 100%;
 }
 
-
-:root{
+:root {
   --black-cl0: #000;
   --black-cl1: #111;
   --white-cl-f: #fff;
