@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html{
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-size: 62.5%;
+  line-height:1.15;
+  scroll-behavior: smooth;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+:root{
+  --color-main: #1a94ff;
+  --white-color: white;
+  --btn-search: #0d5cb6;
+  --text-color: #38383d;
+  --red-color: rgb(255, 66, 78);
+}
+
+
+.grid{
+  width: 1270px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
+
+}
+
+
+
+
