@@ -1,0 +1,418 @@
+/* reset css */
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li{
+  list-style: none;
+}
+
+html, body{
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  /* cuộn trang */
+  scroll-behavior: smooth;
+}
+div{
+  display: block;
+}
+img{
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+/* lớp giả màu sử dụng nhiều lần */
+:root{
+  --text-color: #007784;
+}
+
+
+/* .large-3{
+  max-width: 25%;
+}
+
+.large-5{
+  max-width: 41.66667%;
+}
+
+.large-4{
+  max-width: 33.33333%;
+  .large-25{
+    max-width: 25%;
+  }
+} 
+*/
+
+
+/* ================ CSS LAYOUT ================= */
+.main{
+  background-color: #f0f0f0;
+}
+
+
+.header__wrapper-top{
+  display: block;
+  /* position: absolute; */
+}
+
+.header__main{
+  height: 70px;
+  position: fixed;
+  background-color: whitesmoke;
+  width: 100%;
+  /* z-index: độ ưu tiên class ko cái nào đè lên được */
+  z-index: 999;
+}
+
+.logo-mixi{
+  margin: 4px 0px;
+}
+
+
+.header__inner{
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.header__menu-list{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right-menu{
+  margin-left: auto;
+}
+
+.header__contact{
+  display: flex;
+}
+
+
+.center-menu{
+  margin: 0px 60px;
+}
+
+.header__divider{
+  border-left: 1px solid #ccc;
+}
+
+.header__menu-item,
+.contact-item,
+.cart-item
+{
+  margin: 0 20px;
+}
+
+.header__menu-list .header__menu-item a,
+.header__contact .contact-item a,
+.header__contact  .cart-item a{
+  color: #828282;
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.header__menu-list .header__menu-item a:hover,
+.header__contact  .cart-item a:hover{
+  color: var(--text-color);
+  padding-bottom: 5px;
+  border-bottom: 3px solid var(--text-color);
+  transition: all .2s ease;
+}
+.header__contact .contact-item a:hover{
+  color: #000;
+}
+
+.fa-search,
+.fa-phone-alt,
+.fa-shopping-cart{
+  color: #000;
+}
+
+/* background layout */
+.background__img{
+  padding-top: 70px;
+}
+
+
+
+
+
+/* main product bán đồ */
+.main{
+  padding: 70px 0px;
+}
+
+.product__section{
+  width: 100%;
+}
+
+.section__content-top{
+  max-width: 100%;
+  text-align: center;
+  padding: 0px 15px 90px;
+}
+
+.content__inner-top{
+  margin-bottom: 50px;
+}
+
+.button__primary{
+  
+  /* var(--text-color) sử dụng function hàm */
+  padding: 10px 0px;
+  border: 2px solid var(--text-color);
+}
+.button__primary .view-all{
+  padding: 12px 22px;
+  width: 120px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 550;
+}
+
+.button__primary:hover{
+  background-color: var(--text-color);
+  transition: all 0.4s ease;
+}
+
+.button__primary .view-all:hover{
+  background-color: transparent;
+  color: #fff;
+}
+
+
+/* Sản phẩm product layout */
+.section__product-main{
+  display: flex;  /*đưa lên cùng 1 hàng trang web*/ 
+  max-width: 1300px;
+  margin: auto;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;    /*quá số lượng cho phép tự động xuống hàng*/
+}
+
+.product__small{
+  padding: 0px 10px 20px;
+  /* margin: auto; */
+
+}
+
+.product__box-text{
+  text-align: center;
+  padding: 10px 10px;
+  width: 100%;
+  font-size: .9rem;
+}
+.title-wrapper .category{
+  font-size: .7rem;
+  opacity: 0.7;
+}
+
+.title-wrapper .category-link{
+  margin: 6px 0px;
+  font-size: 0.9rem;
+}
+.title-wrapper .category-link a{
+  color: var(--text-color)
+}
+.title-wrapper .category-link a:hover{
+  color: #8224e3;
+}
+.price-wrapper .fa-star{
+  color: gold;
+  padding-bottom: 10px;
+}
+
+.price-wrapper .price-sell{
+  font-weight: 550;
+}
+
+.price-sell span del{
+  opacity: 0.6;
+  font-weight: normal;
+  margin-right: 5px;
+}
+
+/* hover image product */
+.product__box-image{
+  overflow: hidden;
+}
+.image__fade-in{
+  transition: all 0.5s ease-in-out;  /*thời giản ảnh chuyển động*/
+}
+.image__fade-in:hover{
+  transform: scale(1.1);  /*độ phóng to nhỏ theo % của ảnh*/
+}
+
+
+
+
+/* ==========feedback ========*/
+.feedback{
+  width: 100%;
+  margin: auto;
+}
+.title__feedback {
+  font-size: 130%;
+  text-align: center;
+  padding: 70px 0px;
+}
+
+.title__feedback span{
+  font-size: 130%;
+}
+
+/*==== feedback main-==== */
+
+.feedback__image{
+  display: flex;
+  flex-wrap: wrap;
+}
+.img__item-photo{
+  padding: 5px;
+}
+
+.img-list{
+  margin: auto;
+
+}
+
+.feedback__follow{
+  padding: 20px;
+  text-align: center;
+}
+.img-list:hover{
+  opacity: 0.8;
+}
+
+/* button */
+.load__button,
+.follow__button{
+  margin: 0 5px;
+}
+
+.follow__button,
+.btn-text{
+  padding: 10px 12px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: .9rem;
+}
+
+.follow__button:hover,
+.btn-text:hover{
+  opacity: 0.8;
+}
+
+.btn-text{
+  background-color: #333333;
+}
+
+.follow__button{
+  background-color: var(--text-color);
+}
+
+.follow__button .fa-instagram{
+  color: #fff;
+}
+
+
+/*============ footer =============*/
+.footer{
+  position: relative;
+  /* height: 510px; */
+  /* chú ý đm */
+  background-color: #fafafa;
+}
+
+.footer__section-main{
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 36px;
+}
+
+.footer__main{
+  max-width: 320px;
+  margin:10px auto;
+}
+
+.footer-title{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-text{
+  line-height: 1.6rem;
+  font-size: 1rem;
+  color: rgb(95, 95, 95);
+}
+.icon-mixi__img{
+  padding: 16px 40px;
+}
+
+.product-list .product-item{
+  padding-bottom: 1rem;
+}
+.product-list .product-item a{
+  color: var(--text-color);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.icon-follow .fab{
+  padding:20px;
+}
+
+/* css icon layout */
+.fa-facebook{
+  color: #1271cf;
+}
+.fa-instagram{
+  color: #bf2d75;
+}
+.fa-tiktok{
+  color:#000;
+}
+.fa-youtube{
+  color: red;
+}
+.fa-github{
+  color: #6a2787;
+}
+
+/* footer bottom  copyright */
+.footer__line-center{
+  max-width: 1280px;
+  margin: auto;
+  border: 1px solid #ccc;
+  /* tạo đuồng line */
+}
+.footer__bottom {
+  min-width: 100%;
+  padding: 30px 0px;
+}
+
+.footer__bottom .footer__copyright{
+  text-align: center;
+  color: var(--text-color);
+
+}
+
+.footer__copyright a{
+  color: var(--text-color);
+}
+
+.footer__copyright a:hover{
+  color: violet;
+}
