@@ -1,0 +1,884 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+ul,
+li {
+  list-style: none;
+
+}
+img{
+  display: block;
+}
+
+a{
+  text-decoration: none;
+} 
+
+:root {
+  --white-color: #fff;
+  --green-color: #01b243;
+  --color-header: #d1f1dd;
+  --color-cl1: #28a745;
+  --color-cl2: #17a2b8;
+  --color-cl3: #fc5407;
+  --color-cl4: #dc3545;
+  --color-cl5: #ffc107;
+  --color-cl6: #032244;
+  --color-cl7: #0f4cd9;
+  --color-cl8: #d90f0f;
+  --color-cl9: #e02a25;
+  --color-navbar: #1a1d23;
+  --color--text-nav: #ccc;
+  --background--img: #141417;
+  --color--btn: #2A3028;
+  --color--text-btn: #fff;
+  --color--see-more: #1a1d23;
+  --background--hot: #410A06;
+}
+
+
+
+/*======== CSS layout =====*/
+
+/*=========== header layout css=======*/
+.header__wrapper {
+  position: relative;
+  background-color: var(--white-color);
+}
+
+.header__main {
+  max-width: 100%;
+  background-color: var(--green-color);
+}
+
+.header__main--menu {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.header--logo {
+  margin: 10px 90px 5px 0px;
+
+}
+
+.navbar--menu {
+  display: flex;
+}
+
+.navbar--item {
+  margin: 22px 12px;
+}
+
+.navbar--item .nav--link {
+  color: var(--color-header);
+  font-weight: 550;
+  font-size: .9rem;
+}
+.navbar--item .nav--link:hover{
+  color: var(--white-color);
+}
+
+
+/* header nhà cái */
+.header__sub {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+  justify-content: flex-end;
+}
+
+
+.sub--menu {
+  display: flex;
+
+}
+
+/* .header__sub--main {} */
+
+.sub--item {
+  margin: 10px 5px;
+}
+
+
+.sub--item a {
+  padding: 5px 10px;
+  font-size: .9rem;
+  font-weight: 500;
+
+}
+
+/* màu cho các nhà cái */
+.cl1 a {
+  background-color: var(--color-cl1);
+  color: var(--white-color);
+}
+
+.cl2 a {
+  background-color: var(--color-cl2);
+  color: var(--white-color);
+
+}
+
+.cl3 a {
+  background-color: var(--color-cl3);
+  color: var(--white-color);
+}
+
+.cl4 a {
+  background-color: var(--color-cl4);
+  color: var(--white-color);
+}
+
+.cl5 a {
+  background-color: var(--color-cl5);
+  color: #000;
+}
+
+.cl6 a {
+  background-color: var(--color-cl6);
+  color: gold;
+}
+
+.cl7 a {
+  background-color: var(--color-cl7);
+  color: var(--white-color);
+}
+
+.cl8 a {
+  background-color: var(--color-cl8);
+  color: var(--white-color);
+}
+
+.cl9 a {
+  background-color: var(--color-cl9);
+  color: var(--white-color);
+}
+
+/* ======= end header ========== */
+
+/*========== MAIN LAYOUT CSS =========*/
+
+#app:before {
+  content: "";
+  background-image: url(https://xoilac1.com/wp-content/themes/bongda/dist/images/bg-home1.png);
+  /* link background
+  https://xoilac1.com/wp-content/themes/bongda/dist/images/bg-home1.png*/
+  height: 721px;
+  width: 100%;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+body #app{
+  background-color: var(--background--img);
+  
+}
+
+.main {
+  width: 100%;
+  /* chú tý */
+  /* height: 3100px; */
+  padding-bottom: 30px;
+}
+
+.main__wrapper {
+  max-width: 1110px;
+  /* background-color: #01b243;
+  height: 1000px; */
+  /* viết đè th con lên th cha phải có thuộc tính position sau đó nó tìm th cha gần nhất có thuộc tính position  */
+  position: relative;
+  top: 30px;
+  margin: auto;
+}
+
+.matches__title {
+  /* title lớn tiêu đề */
+  margin-bottom: 20px;
+}
+
+.matches__title h1 {
+  font-size: 1.4rem;
+  color: var(--white-color);
+}
+
+.main__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+}
+
+.main__row--left {
+  border-radius: 8px;
+  background-color: var(--color-navbar);
+
+}
+
+.list__filter li {
+  padding: 10px 20px;
+}
+
+.list__filter>li>a {
+  color: var(--color--text-nav);
+
+}
+
+.list__filter>li>a {
+  font-size: 0.9rem;
+}
+.list__filter>li>a:hover{
+  color: var(--white-color);
+}
+
+.list__filter {
+  display: flex;
+}
+
+/* main row css cho tất các giải đấu */
+.form__control {
+  background-color: var(--color-navbar);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: var(--color--text-nav);
+  height: 44px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: .9rem;
+  line-height: 18px;
+  padding: 0px 50px 0px 20px;
+}
+
+.form__control:focus{
+  background-color: var(--white-color);
+  color: var(--color-navbar)
+}
+
+/* grid__matches css layout  ========== css cho từng  trận đấu đá bóng*/
+
+.grid__matches-soccer {
+  display: flex;
+  margin-left: -12px;
+  flex-wrap: wrap;
+  margin-right: -12px;
+}
+
+.grid__matches {
+  max-width: 1110px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.grid__matches-item {
+  margin: 0px 10px 15px 10px;
+}
+
+.grid__match {
+  background-image: url(https://xoilac1.tv/wp-content/themes/bongda/dist/images/match-even.png);
+  /* https://xoilac1.tv/wp-content/themes/bongda/dist/images/match-even.png */
+  width: 500px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 10px 20px;
+}
+
+
+
+.grid__matches-item .grid__match>a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+}
+
+.grid__match--header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.grid__match--league .text--league {
+  font-weight: 700;
+  font-size: .8rem;
+  color: #fff;
+  line-height: 20px;
+
+}
+
+.grid__match--commentaor {
+  font-weight: 550;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: gold;
+  border-radius: 2px;
+  padding-top: 5px;
+  /* position: absolute; */
+  /* left: 50%; */
+}
+
+.grid__match--datetime {
+  font-size: 0.8rem;
+  line-height: 18px;
+  color: #fff;
+  background: red;
+  border-radius: 2px;
+  padding: 3px 8px;
+}
+
+/* css cho trận đấu cụ thể */
+.grid__match--body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid__match--body .grid__team--home {
+  display: flex;
+  /*chuyển từ row hàng thành column cột => đổi trục main-start lên trên trục main-end xuống dưới */
+  flex-direction: column;
+  align-items: center;
+  /*đưa căn các phần tử vào chính giữa*/
+
+}
+
+.team__home--logo,
+.team__away--logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+/* tỷ số thời gian và vs trận đấu */
+.grid__match--status {
+  display: flex;
+  position: absolute;
+  /* sử dụng top left chỉ khi có position */
+  top: 40%;
+  /* left: 50%; */
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid__match--vs {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+}
+
+.grid__match--status .time__match{
+  padding: 5px 10px;
+  background: var(--green-color);
+  font-size: 0.7rem;
+  color: var(--color--text-btn);
+  font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.grid__match--status .num__match{
+  padding: 4px 14px;
+  background-color: var(--color-cl8);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color--text-btn);
+  border-radius: 5px;
+
+}
+
+/* css đội khách */
+.grid__team--away {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.team__home--logo {
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.grid__team--name {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: .8rem;
+}
+
+.btn--odds {
+  background-color: var(--green-color);
+}
+.btn--view {
+  background-color: var(--color--btn);
+  opacity: 0.85;
+}
+
+
+.btn--odds,
+.btn--view {
+  border-radius: 2px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--color--text-btn);
+  padding: 6px 22px;
+  display: inline-block;
+}
+
+/* btn see more soccer xem thêm bóng đá */
+.see__more-soccer{
+  background-color: var(--color--see-more);
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.btn__see-more{
+  font-size: .9rem;
+  color: var(--green-color);
+}
+.btn__see-more:hover{
+  color: var(--white-color);
+}
+
+/* css section soi kèo bóng đá ============= */
+.block__category{
+  margin: 30px 0px;
+}
+
+.block__category--main{
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+/* bọc bên trái phải của soi kèo */
+.category__list--left{
+  width: 70%;
+  margin: auto;
+  flex-wrap: wrap;
+  /* cho nhà cái nhảy xuống */
+  padding-left: -4px;
+}
+
+.category--title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  
+}
+
+.category--title > h4{
+  color: var(--color--text-btn);
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;  /*chữ in hoa*/
+}
+
+.category--title strong{
+  color: var(--green-color);
+}
+
+.category--title > a{
+  color: var(--color--text-btn);
+  background-color: var(--green-color);
+  border-radius: 5px;
+  padding: 0px 20px;
+  margin: 6px 0px;
+}
+.category--title > a:hover{
+  background-color: var(--white-color);
+  color: var(--green-color);
+  transition: all 0.3s ease;
+}
+
+/* layout css các nhận định của kèo */
+
+
+.post__thumbnail .post__title-img{
+  width: 250px;
+  height:165px;
+}
+
+.post__list{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  margin-left: -5px;
+  
+}
+
+.post__item{
+  max-width: 250px;
+  background-color: var(--color--see-more);
+  margin-bottom: 10px;
+
+}
+
+.post__thumbnail{
+  overflow: hidden;
+}
+
+.post__title-img{
+  transition: all 0.4s ease;
+}
+
+.post__title-img:hover{
+  transform: scale(1.08);
+}
+
+
+.post__title{
+  padding: 30px 10px;
+}
+
+.post__title a{
+  color: var(--color--text-btn);
+  font-size: .9rem;
+}
+
+.post__title a:hover{
+  color: var(--green-color);
+  transition: all 0.4s ease;
+}
+
+/* css section bên phải của soi kèo */
+
+.category__list--right{
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.right__title--box{
+  margin: 0px 10px 20px 0px;
+}
+
+.right__title--box>span{
+  font-size: 1.5rem;
+  color: var(--white-color);
+  margin-left: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.right__title--box > span > strong{
+  color: var(--green-color);
+  text-transform: uppercase;
+}
+.offer__right{
+  background-color: var(--green-color);
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  padding: 26px 0px;
+  border-radius: 14px;
+}
+.offer__content{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+
+}
+/* làm cho top số 1 */
+
+.offer__number--top{
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-cl8);   
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  border-radius: 50%;
+  color: var(--white-color);
+}
+
+.offer__number--top span{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+/* css cho logo */
+.offer__logo--team{
+  display: flex;
+  flex-direction: column;
+}
+
+.offer__logo--team a{
+  background-color: var(--white-color);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 120px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 10px; */
+}
+
+.offer__logo--wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 13px;
+}
+
+/* css cho content nội dung */
+.offer__rating{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.soccer__component--wrapper .soccer__text{
+  margin: 0 16px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--white-color);
+
+}
+
+.soccer__component--wrapper .soccer__price{
+  text-align: center;
+  color: var(--white-color);
+  font-weight: 600;
+}
+.offer__button{
+  margin-top: 13px;
+}
+.offer__button .offer__btn{
+  line-height: 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  margin: auto 0px;
+  background-color: var(--color--btn);
+  margin-top: 10px;
+  color: var(--white-color);
+  border-radius: 5px;
+}
+.offer__btn:hover{
+  background-color: var(--white-color);
+  color: var(--color-cl3);
+  transition: all 0.6s ease;
+}
+
+/* css video highlight css */
+
+.video__wrapper{
+  max-width: 100%;
+  
+}
+.video__content{
+  margin-bottom: 20px;
+}
+.video__content > h3{
+  font-size: 1.5rem;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+.video__content > h3 > strong{
+  font-weight: 700;
+  color: var(--green-color);
+}
+.video__highlight--wrapper{
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+  margin-left: -5px;
+}
+
+/* video 1 */
+.video__main{
+  max-width: 265px;
+  background-color: var(--color--see-more);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+.video__list--img .video__image{
+  width: 265px;
+  height: 164px;
+}
+/* hover img transition */
+.video__list--img{
+  overflow: hidden;
+}
+.video__image{
+  transition: all 0.4s ease-in;
+}
+.video__image:hover{
+  transform: scale(1.08);
+}
+
+
+.title__name{
+  font-size: .9rem;
+  padding: 20px 10px;
+  font-weight: 500;
+}
+.title__name > a{
+  color: var(--color--text-btn);
+}
+
+.title__name > a:hover{
+  color: var(--green-color);
+  transition: all 0.4s ease;
+}
+
+/* about giới thiệu về xôi l  */
+
+.about__content{
+  color: var(--color--text-btn);
+  text-transform: uppercase;
+  margin: 20px 0px;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.about__content > h3 > strong {
+  color: var(--green-color);
+}
+.about__paragraph{
+  background-color: var(--color--see-more);
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  /* căn đều chữ 2 bên */
+  text-align: justify;
+}
+
+.about__paragraph .paragraph{
+  color: var(--green-color);
+  font-size:1rem;
+  
+}
+
+.about__paragraph .paragraph:hover{
+  color: var(--color--text-nav);
+}
+/*========== end main ========== */
+
+
+
+/* ========== FOOTER LAYOUT CSS ======== */
+
+
+.footer{
+  max-width: 100%;
+  background-image:url(https://xoilac1.tv/wp-content/themes/bongda/dist/images/bg-footer.png);
+  /* https://xoilac1.tv/wp-content/themes/bongda/dist/images/bg-footer.png */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer__wrapper{
+  max-width: 1110px;
+  margin: auto;
+  text-align: center
+}
+
+.footer__text--center{
+  padding: 40px 120px 0px;
+  font-size: 0.8rem;
+  color: var(--color--text-btn);
+}
+.footer__logo > a > img{
+  margin: auto;
+}
+
+.footer__menu .menu__item{
+  padding: 20px 0px;
+}
+
+.menu__item .item__link{
+  padding:20px 20px;
+  color: var(--green-color);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+
+
+
+.footer__menu .address > a{
+  color: var(--color--text-btn);
+}
+
+.footer__contact{
+  margin: 20px 10px;
+
+}
+.contact__icon .fab{
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.fa-facebook{
+  color: #1271cf;
+}
+.fa-instagram{
+  color: #bf2d75;
+}
+.fa-tiktok{
+  color: #000;
+}
+.fa-youtube{
+  color: red;
+}
+.fa-github{
+  color: #6a2787;
+}
+.footer__copyright{
+  padding-bottom: 36px;
+}
+.contact__icon .fab:hover{
+  background-color: white;
+  border-radius: 50%;
+}
+
+.footer__copyright .copyright__link{
+  color: var(--green-color);
+}
+
+.footer__copyright .copyright__link:hover{
+  color: var(--text-color);
+}
